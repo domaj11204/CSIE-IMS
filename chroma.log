@@ -1,0 +1,125 @@
+[33mWARNING[0m:  [30-07-2024 06:41:59] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [30-07-2024 06:41:59] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [30-07-2024 06:41:59] Starting component System
+[36mDEBUG[0m:    [30-07-2024 06:41:59] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [30-07-2024 06:41:59] Starting component SqliteDB
+[36mDEBUG[0m:    [30-07-2024 06:42:00] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [30-07-2024 06:42:00] Starting component Posthog
+[36mDEBUG[0m:    [30-07-2024 06:42:00] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [30-07-2024 06:42:00] Starting component SegmentAPI
+[32mINFO[0m:     [30-07-2024 06:42:00] Started server process [[36m40920[0m]
+[32mINFO[0m:     [30-07-2024 06:42:00] Waiting for application startup.
+[32mINFO[0m:     [30-07-2024 06:42:00] Application startup complete.
+[32mINFO[0m:     [30-07-2024 06:42:00] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [30-07-2024 06:42:03] Shutting down
+[32mINFO[0m:     [30-07-2024 06:42:04] Waiting for application shutdown.
+[36mDEBUG[0m:    [30-07-2024 06:42:04] Stopping component System
+[36mDEBUG[0m:    [30-07-2024 06:42:04] Stopping component SegmentAPI
+[36mDEBUG[0m:    [30-07-2024 06:42:04] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [30-07-2024 06:42:04] Stopping component Posthog
+[36mDEBUG[0m:    [30-07-2024 06:42:04] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [30-07-2024 06:42:04] Stopping component SqliteDB
+[36mDEBUG[0m:    [30-07-2024 06:42:04] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [30-07-2024 06:42:04] Application shutdown complete.
+[32mINFO[0m:     [30-07-2024 06:42:04] Finished server process [[36m40920[0m]
+[33mWARNING[0m:  [30-07-2024 06:42:20] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [30-07-2024 06:42:20] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [30-07-2024 06:42:20] Starting component System
+[36mDEBUG[0m:    [30-07-2024 06:42:20] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [30-07-2024 06:42:20] Starting component SqliteDB
+[36mDEBUG[0m:    [30-07-2024 06:42:20] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [30-07-2024 06:42:20] Starting component Posthog
+[36mDEBUG[0m:    [30-07-2024 06:42:20] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [30-07-2024 06:42:20] Starting component SegmentAPI
+[32mINFO[0m:     [30-07-2024 06:42:20] Started server process [[36m45988[0m]
+[32mINFO[0m:     [30-07-2024 06:42:20] Waiting for application startup.
+[32mINFO[0m:     [30-07-2024 06:42:20] Application startup complete.
+[32mINFO[0m:     [30-07-2024 06:42:20] Uvicorn running on [1mhttp://10.147.19.205:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [30-07-2024 06:48:20] Shutting down
+[32mINFO[0m:     [30-07-2024 06:48:20] Waiting for application shutdown.
+[36mDEBUG[0m:    [30-07-2024 06:48:20] Stopping component System
+[36mDEBUG[0m:    [30-07-2024 06:48:20] Stopping component SegmentAPI
+[36mDEBUG[0m:    [30-07-2024 06:48:20] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [30-07-2024 06:48:20] Stopping component Posthog
+[36mDEBUG[0m:    [30-07-2024 06:48:20] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [30-07-2024 06:48:20] Stopping component SqliteDB
+[36mDEBUG[0m:    [30-07-2024 06:48:20] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [30-07-2024 06:48:20] Application shutdown complete.
+[32mINFO[0m:     [30-07-2024 06:48:20] Finished server process [[36m45988[0m]
+[33mWARNING[0m:  [30-07-2024 06:48:26] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [30-07-2024 06:48:26] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [30-07-2024 06:48:26] Starting component System
+[36mDEBUG[0m:    [30-07-2024 06:48:26] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [30-07-2024 06:48:26] Starting component SqliteDB
+[36mDEBUG[0m:    [30-07-2024 06:48:26] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [30-07-2024 06:48:26] Starting component Posthog
+[36mDEBUG[0m:    [30-07-2024 06:48:26] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [30-07-2024 06:48:26] Starting component SegmentAPI
+[32mINFO[0m:     [30-07-2024 06:48:26] Started server process [[36m10024[0m]
+[32mINFO[0m:     [30-07-2024 06:48:26] Waiting for application startup.
+[32mINFO[0m:     [30-07-2024 06:48:26] Application startup complete.
+[32mINFO[0m:     [30-07-2024 06:48:26] Uvicorn running on [1mhttp://10.147.19.205:8000[0m (Press CTRL+C to quit)
+[33mWARNING[0m:  [30-07-2024 06:57:14] Invalid HTTP request received.
+[33mWARNING[0m:  [30-07-2024 06:57:14] Invalid HTTP request received.
+[33mWARNING[0m:  [30-07-2024 06:57:14] Invalid HTTP request received.
+[33mWARNING[0m:  [30-07-2024 06:57:14] Invalid HTTP request received.
+[32mINFO[0m:     [30-07-2024 06:57:19] 10.147.19.53:6957 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [30-07-2024 06:57:19] 10.147.19.53:6957 - "GET /favicon.ico HTTP/1.1" 404
+[32mINFO[0m:     [30-07-2024 06:57:44] 10.147.19.53:7135 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:44] 10.147.19.53:7135 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:47] 10.147.19.53:7153 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:47] 10.147.19.53:7153 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:50] 10.147.19.53:7167 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:50] 10.147.19.53:7167 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:53] 10.147.19.53:7182 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:53] 10.147.19.53:7182 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:56] 10.147.19.53:7195 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:57:56] 10.147.19.53:7195 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:58:21] 10.147.19.53:7313 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:58:21] 10.147.19.53:7313 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:58:36] 10.147.19.53:7403 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 06:58:36] 10.147.19.53:7403 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 06:58:37] Collection test_collection already exists, returning existing collection.
+[32mINFO[0m:     [30-07-2024 06:58:37] 10.147.19.53:7404 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 06:58:37] Collection test_collection already exists, returning existing collection.
+[32mINFO[0m:     [30-07-2024 06:58:37] 10.147.19.53:7404 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 06:58:38] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [30-07-2024 07:01:33] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [30-07-2024 07:01:34] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [30-07-2024 07:01:34] Starting component System
+[36mDEBUG[0m:    [30-07-2024 07:01:34] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [30-07-2024 07:01:34] Starting component SqliteDB
+[36mDEBUG[0m:    [30-07-2024 07:01:34] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [30-07-2024 07:01:34] Starting component Posthog
+[36mDEBUG[0m:    [30-07-2024 07:01:34] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [30-07-2024 07:01:34] Starting component SegmentAPI
+[32mINFO[0m:     [30-07-2024 07:01:34] Started server process [[36m39272[0m]
+[32mINFO[0m:     [30-07-2024 07:01:34] Waiting for application startup.
+[32mINFO[0m:     [30-07-2024 07:01:34] Application startup complete.
+[32mINFO[0m:     [30-07-2024 07:01:34] Uvicorn running on [1mhttp://10.147.19.205:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [30-07-2024 07:01:47] 10.147.19.53:7896 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 07:01:47] 10.147.19.53:7896 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 07:01:47] Collection test_collection already exists, returning existing collection.
+[32mINFO[0m:     [30-07-2024 07:01:47] 10.147.19.53:7897 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 07:01:47] Collection test_collection already exists, returning existing collection.
+[32mINFO[0m:     [30-07-2024 07:01:47] 10.147.19.53:7897 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 07:01:48] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [30-07-2024 07:05:25] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [30-07-2024 07:05:26] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [30-07-2024 07:05:26] Starting component System
+[36mDEBUG[0m:    [30-07-2024 07:05:26] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [30-07-2024 07:05:26] Starting component SqliteDB
+[36mDEBUG[0m:    [30-07-2024 07:05:26] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [30-07-2024 07:05:26] Starting component Posthog
+[36mDEBUG[0m:    [30-07-2024 07:05:26] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [30-07-2024 07:05:26] Starting component SegmentAPI
+[32mINFO[0m:     [30-07-2024 07:05:26] Started server process [[36m46316[0m]
+[32mINFO[0m:     [30-07-2024 07:05:26] Waiting for application startup.
+[32mINFO[0m:     [30-07-2024 07:05:26] Application startup complete.
+[32mINFO[0m:     [30-07-2024 07:05:26] Uvicorn running on [1mhttp://10.147.19.205:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [30-07-2024 07:05:44] 10.147.19.53:8513 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 07:05:44] 10.147.19.53:8513 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 07:05:44] Collection test_collection already exists, returning existing collection.
+[32mINFO[0m:     [30-07-2024 07:05:44] 10.147.19.53:8516 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [30-07-2024 07:05:44] 10.147.19.53:8516 - "GET /api/v1/collections/8f6f789f-1e9a-467f-b7da-1fcb29125d91/count HTTP/1.1" 200
+[36mDEBUG[0m:    [30-07-2024 07:05:44] Starting component PersistentLocalHnswSegment

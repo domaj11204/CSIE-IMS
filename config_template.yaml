@@ -1,0 +1,87 @@
+knowledge_base:
+  db: neo4j
+  type:
+    term: obsidian
+    測試用筆記: obsidian
+    筆記: obsidian
+    摘錄: knowledge_base
+    chunk: chroma
+    知識本體: rdf
+    文獻: reference
+    瀏覽紀錄: history
+obsidian:
+  authorization: Bearer ********
+  exclude_path: '["template"]'
+  path: D:\Obsidian\
+  url: http://127.0.0.1:27123
+  source: true
+history:
+  history_path: C:\Users\User\AppData\Local\Google\Chrome\User Data\Default\History
+  url: http://127.0.0.1
+llm:
+  tgi_url: http://127.0.0.1:8080
+  openai-like-url: http://127.0.0.1:8080/api/v1/complete
+  source: true
+  OPENAI_API_KEY: sk-*********
+embedded:
+  url: http://127.0.0.1:8000
+  path: D:\Obsidian\每日筆記
+  dataset_path: .\data\noteqa.json
+  db_path: ./data/db/chromadb
+  chunk_size: 1024
+  hnsw_space: cosine # l2 cosine ip
+  model_name: BAAI/bge-m3
+neo4j:
+  knowledge_base:
+  - 術語
+  - 論文
+  - 人物
+  password: password
+  url: bolt://127.0.0.1:7687
+  user: neo4j
+  source: true
+obsidian:
+  authorization: Bearer ***********
+  exclude_path: '["template"]'
+  path: E:\Research\ObsidianSync\
+  url: http://127.0.0.1:27123
+  source: true
+log:
+  path: .\data\log
+shortcuts:
+  search: ctrl+alt+s
+  add: ctrl+alt+a
+  export: ctrl+alt+e
+  excerpt: ctrl+alt+c
+FastAPI:
+  host: "0.0.0.0"
+  port: "27711"
+  url: 127.0.0.1:27711
+reference:
+  path: ./data/reference.csv
+rag:
+  embedded_model: BAAI/bge-m3  # text-embedding-ada-002 BAAI/bge-m3
+  llm_model: gpt-4o-mini # gpt-4o # MediaTek-Research/Breeze-7B-Instruct-v0_1 qwen1_5-32b-chat
+  llm_mode: openai
+  retrieval_method:
+    - similarity # chroma_similarity bm25 ContextualCompressionRetriever
+  top_k: 10
+  search_k: 10
+  chunk_size: 1024
+  hnsw_space: cosine # l2 cosine ip
+  db_path: ./data/db/chromadb
+  db_host: 10.147.19.2
+  db_port: 8001
+  collection_name: test_collection
+  chroma:
+    port: 27712
+  prompt_template: |
+    不要使用參考文獻以外的知識或資訊。若資訊不足請回答「資訊不足」。
+    ==參考文獻==
+    {context}
+
+    ==問題==
+    根據上文，{question}
+    請用20個字簡潔回答問題。
+rdf:
+  tcm_owl: ./data/symptoms.owl

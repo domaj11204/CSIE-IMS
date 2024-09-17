@@ -1,0 +1,37 @@
+                                               answer                                       ground_truth                                           question  answer_correctness
+0   首先，使用「git clone」將筆記下載，在Obsidian中開啟「vault」，確認「o...  1. 使用git clone指令下載筆記至本地。\n2. 在Obsidian中開啟vault...                                    如何設定Obsidian同步?            0.538021
+1    Ontology是一個 domain 的正式、形式化代表，定義了在該範圍內哪些名詞代表什麼意義。  \nOntology是一種用於特定範圍內精確定義術語含義的正式表示形式，有助於資料的互操作性...                                       Ontology是什麼?            0.734678
+2            不，LLaMA的中文支持不佳。請使用中文微調專案和webui專案以改善中文生成。                                                 不佳                                        llama支援中文嗎?            0.201062
+3   在MySQL中，將多張表合併可使用JOIN句法，如RIGHT JOIN、LEFT JOIN或...  SELECT A.id as `標準症狀ID`, A.standard_symptoms a...                                   在mysql中如何將多張表合併?            0.203739
+4   請啟用--secure-file-priv選項或調整MySQL配置以執行MySQL INTO...  SELECT A.id as `標準症狀ID`, A.standard_symptoms a...                                      如何將mysql的表匯出?            0.203836
+5   請參考「obsidian-citation-plugin」 GitHub project 安...                                2023-08-30 00:00:00                              什麼時候安裝了obsidian的引用外掛?            0.174370
+6                       請參考IANA的服務與端口編號，選擇沒人佔用的27709。                                參考IANA，選擇沒人佔用的27709                                           怎麼選擇端口的?            0.612732
+7   為解決論文標題中的冒號問題，您可以在Windows中使用其他符號，如「-」，取代冒號，以避免...                                              換成-符號                                    如何解決論文標題中的冒號問題?            0.587565
+8                        聲道、取樣率、語速、和bit率可能影響語音識別的準確度。                                  降噪、聲道、取樣率、語速、bit率                                 哪些因素可能會影響語音識別的準確度?            0.897130
+9              微調Whisper，請參閱Whisper-Finetune並使用職權資料集。                        參考Whisper-Finetune#0924實驗筆記                                       如何微調whisper?            0.221603
+10  下載graphviz.org的zip檔，修改protégé中的dot.exe路徑設定以解決顯...                              下載zip檔，修改dot.exe的路徑設定                                 如何解決protégé中的顯示問題?            0.729215
+11  系統需要使用多執行緒以同時處理多項任務、提升效能和避免單執行緒造成的延遲，例如在資料庫IO和...                              避免資料庫IO讓websocket停下來。                                      為甚麼系統要使用多執行緒?            0.218127
+12                                              25秒後。                                                30秒                            service worker幾秒後會自動關閉?            0.226362
+13  因Chrome-extension不允許CSP，限制在HTML中直接呼叫JavaScript函數。                           因為chrome-extension不允許CSP        為什麼chrome-extension不能在html中直接呼叫javascript函數            0.231056
+14                             根據上文，ChatGPT的溫度設為0最適當。                                                  0                                 ChatGPT的溫度設為多少最恰當?            0.182120
+15                 嵌入模型可能遇到顯卡不足、LLM負荷、量化需求及FAISS整合問題。                                    markdown語意、顯卡負擔                                       嵌入有可能遇到什麼問題?            0.208789
+16                                              消息不足。             加上參數--condition_on_previous_text False                                 有哪些方法可以解決語音辨識的幻聽問題            0.187746
+17                          語音辨識評估可包括冗字、專有名詞和其他錯誤等方面。                                      冗字、專有名詞，其他錯誤等                                     語音辨識可以有哪些評估的方向            0.522310
+18  瀏覽器插件不使用pipe是因為javascript無法操作作業系統層級的pipe，且使用no...                          javascript無法操作作業系統層級的pipe                                   為什麼瀏覽器插件不使用pipe?            0.726022
+19        根據上文，OpenCitations是一個開源學術引用數據庫，用於提供可靠的引用數據。                                           一種學術知識圖譜                                   什麼是OpenCitations            0.199482
+20  您參考了官網 (https://pytorch.org/get-started/locall...   https://home.gamer.com.tw/artwork.php?sn=5701595                       我參考了哪個教學將pytorch更新到pytorch2?            0.488569
+21                         二種引用格式：BibTeX 更相容，RIS 較少用。                                       bibtex的相容性更好                                     bibtex和ris差在哪？            0.220879
+22               從論文的相關研究中，你可以獲得更多資訊、研究、說明、作者評價和引用編號。                                        作者對於其他研究的評價                                   可以從論文的相關研究中得到什麼？            0.429332
+23                                土豆挑戰是一個挑戰，但詳細內容未提供。                                               資訊不足                                           土豆挑戰是什麼？            0.200736
+24   使用sendMessage的callback的第三個參數sendResponse完成完整的溝通。  正確的使用sendmessage的callback的第三個參數sendResponse完成完...  如何解決The message port closed before a response ...            0.738993
+25  python套件 pynput、global-hotkeys、和 keyboard 能監聽快捷鍵。                      pynput、global-hotkey、keyboard                                  哪些python套件能監聽快捷鍵？            0.732339
+26             除了PyQt，當時還考慮Tkinter、kivy、DearPyGui等套件。                             Tkinter、kivy、DearPyGui                              除了pyqt外，當時還考慮哪些類似的套件？            0.471722
+27                              系統中的FastAPI監聽端口27711。                                              27711                                 系統中的FastAPI監聽哪個端口？            0.185933
+28                                               資訊不足                                                RAG                                        RALM類似什麼概念？            0.932949
+29           多源資料分析聚焦統合、轉換、除錯和分析資料，而多源資訊管理則著重蒐集和管理資訊。       多源資料分析主要注重於統合、轉換、除錯並分析資料，而多源資訊管理則著重於蒐集與管理資訊。                                      多源資料分析和管理差在哪？            0.675995
+30                                               資訊不足                                                看完了                            在2024/4/17，我看完NEUMAI了嗎？            0.195653
+31                                               資訊不足  一個關於langchain+neo4j問答的實做，https://blog.langchai...                                在2024/4/17，我做了什麼實驗？            0.187332
+32                                               資訊不足                                                 還沒                            在2024/4/17，我實驗過gemma了嗎?            0.199213
+33                                               資訊不足                                                 還沒                在2024/4/17，我設計完整個架構和所需要的API需求及文件了嗎？            0.199213
+34                                                 負面                                                 負面                                我對ChatRTX的評價是正面還是負面            1.000000
+35                                               資訊不足                                              100分鐘                             在2024/4/21，我總共花了幾分鐘跑實驗            0.197681

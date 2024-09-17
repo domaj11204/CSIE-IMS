@@ -1,0 +1,543 @@
+,檢索類別,問題類別,問題,答案,備註,參考,context,標題1,simple_context
+0,每日筆記,列出問題,如何設定Obsidian同步?,"1. 使用git clone指令下載筆記至本地。
+2. 在Obsidian中開啟vault。
+3. 確保obsidian-git插件已自動安裝並完成設定。
+4. 若遇到推送問題，考慮重置ssh-key密碼或使用ssh-add來管理ssh密鑰。",,['每日筆記/2023-07-24'],"# 新增宿舍的筆記同步
+1. 參考[[Git指令]]，新增ssh key
+2. 使用ssh -T測試OK
+3. 用[[git clone]]將整份筆記下載
+4. 在Obsidian中開啟vault
+5. [[obsidian-git]]已自動安裝完成，設定也同步完成(只有快捷鍵不知道為甚麼變成commit)
+6. 但[[obsidian-git]]無法push，報錯無法連線到Obsidian sync.git，但[[Source tree]]可以，推測是ssh-key的密碼問題
+7. 使用以下指令重製ssh-key密碼為空
+```
+   ssh-keygen -p -f github_key
+```
+8. 重製為空後即可正常使用
+註: 使用ssh-add等[[ssh agent]]功能應該也能解決，但由於ssh-add指令用錯參數導致實驗失敗，就直接將密碼重製了。",新增宿舍的筆記同步,"# 新增宿舍的筆記同步
+1. 參考[[Git指令]]，新增ssh key
+2. 使用ssh -T測試OK
+3. 用[[git clone]]將整份筆記下載
+4. 在Obsidian中開啟vault
+5. [[obsidian-git]]已自動安裝完成，設定也同步完成(只有快捷鍵不知道為甚麼變成commit)
+6. 但[[obsidian-git]]無法push，報錯無法連線到Obsidian sync.git，但[[Source tree]]可以，推測是ssh-key的密碼問題"
+1,每日筆記,簡單問題,Ontology是什麼?,"
+Ontology是一種用於特定範圍內精確定義術語含義的正式表示形式，有助於資料的互操作性和自動化推理。",翻譯及統整,['每日筆記/2023-08-03'],"# 1. 釐清知識本體和知識圖譜的差別
+關鍵字：[[ontology]] [[knowledge graph]]
+
+>In computing, an ontology is then a concrete, formal representation—a convention—on what terms mean within the scope in which they are used (e.g., a given domain). Like all conventions, the usefulness of an ontology depends on how broadly and consistently it is adopted and how detailed it is. Knowledge graphs that use a shared ontology will be more interoperable. Given that ontologies are formal representations, they can further be used to automate entailment. Among the most popular ontology languages used in practice are the Web Ontology Language (OWL) [52], recommended by the W3C and compatible with RDF graphs; and the Open Biomedical Ontologies Format (OBOF) [89], used mostly in the biomedical domain. Since OWL is the more widely adopted, we focus on its features, though many similar features are found in both [89]. Before introducing such features, however, we must discuss how graphs are to be interpreted.
+
+",1. 釐清知識本體和知識圖譜的差別,"In computing, an ontology is then a concrete, formal representation—a convention—on what terms mean within the scope in which they are used (e.g., a given domain). Like all conventions, the usefulness of an ontology depends on how broadly and consistently it is adopted and how detailed it is. Knowledge graphs that use a shared ontology will be more interoperable. Given that ontologies are formal representations, they can further be used to automate entailment. Among the most popular ontology languages used in practice are the Web Ontology Language (OWL) [52],"
+2,每日筆記,事實問題,llama支援中文嗎?,不佳，需使用中文資料集微調。,,['每日筆記/2023-08-07'],"# 2. 測試[[LLaMA2]]
+中文支援不佳，嘗試使用中文微調專案[[Chinese-LLaMA-Alpaca-2]]
+及webui專案[[text-generation-webui]]
+設定參考[https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/text-generation-webui_zh](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/wiki/text-generation-webui_zh)
+- 須解決簡體中文的問題
+
+",2. 測試[[LLaMA2]],"# 2. 測試[[LLaMA2]]
+中文支援不佳"
+3,每日筆記,簡單問題,在mysql中如何將多張表合併?,JOIN,,['每日筆記/2023-08-14'],"# [[MySQL]]三表[[join]]
+``` mysql
+SELECT A.id as `標準症狀ID`, A.standard_symptoms as `標準症狀`, C.id as `原始症狀ID`, C.original_symptoms as `原始症狀` FROM `standard_symptoms_table` as A RIGHT JOIN `symptoms_mapping_table` as B on A.id = B.standard_symptoms_ID left join `original_symptoms_table` as C on B.original_symptoms_ID = C.id;
+```
+
+",[[MySQL]]三表[[join]],"# [[MySQL]]三表[[join]]
+``` mysql
+SELECT A.id as `標準症狀ID`, A.standard_symptoms as `標準症狀`, C.id as `原始症狀ID`, C.original_symptoms as `原始症狀` FROM `standard_symptoms_table` as A RIGHT JOIN `symptoms_mapping_table` as B on A.id = B.standard_symptoms_ID left join `original_symptoms_table` as C on B.original_symptoms_ID = C.id;
+```
+
+"
+4,每日筆記,簡單問題,如何將mysql的表匯出?,INTO OUTFILE,,['每日筆記/2023-08-14'],"# [[MySQL]]匯出檔案
+參考:https://stackoverflow.com/questions/4018123/export-a-mysql-table-via-join
+``` mysql
+mysql> SELECT A.id as `標準症狀ID`, A.standard_symptoms as `標準症狀`, C.id as `原始症狀ID`, C.original_symptoms as `原始症狀` INTO OUTFILE '/home/zeus/result.csv' FROM `standard_symptoms_table` as A RIG
+HT JOIN `symptoms_mapping_table` as B on A.id = B.standard_symptoms_ID left join `original_symptoms_table` as C on B.original_symptoms_ID = C.id;
+ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+```",[[MySQL]]匯出檔案,"# [[MySQL]]匯出檔案
+``` mysql
+mysql> SELECT A.id as `標準症狀ID`, A.standard_symptoms as `標準症狀`, C.id as `原始症狀ID`, C.original_symptoms as `原始症狀` INTO OUTFILE '/home/zeus/result.csv' FROM `standard_symptoms_table` as A RIG
+HT JOIN `symptoms_mapping_table` as B on A.id = B.standard_symptoms_ID left join `original_symptoms_table` as C on B.original_symptoms_ID = C.id;
+```"
+5,每日筆記,簡單問題,什麼時候安裝了obsidian的引用外掛?,2023-08-30 00:00:00,,['每日筆記/2023-08-30'],"# 1. 幫宿舍電腦安裝引用套件[[obsidian-citation-plugin]]
+步驟如[[Github project/obsidian-citation-plugin|obsidian-citation-plugin]]中所寫",1. 幫宿舍電腦安裝引用套件[[obsidian-citation-plugin]],"每日筆記/2023-08-30
+# 1. 幫宿舍電腦安裝引用套件[[obsidian-citation-plugin]]"
+6,每日筆記,簡單問題,怎麼選擇端口的?,參考IANA，選擇沒人佔用的27709,涉及翻譯,['每日筆記/2023-09-20'],"# 4. 如何選擇port?
+參考[^2] ，選擇沒人佔用的27709
+
+[^1]: https://stackoverflow.com/questions/42631509/piping-node-js-to-python
+[^2]: https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=27709
+
+",4. 如何選擇port?,"# 4. 如何選擇port?
+參考IANA ，選擇沒人佔用的27709"
+7,每日筆記,簡單問題,如何解決論文標題中的冒號問題?,換成-符號,1=2,['每日筆記/2023-09-21' '每日筆記/2023-12-21'],"# 4. 考量windows檔案名稱問題
+https://stackoverflow.com/questions/10386344/how-to-get-a-file-in-windows-with-a-colon-in-the-filename
+想辦法讓windows檔案名稱能支援論文標題。
+[Automatically convert colons in {{title}} to other symbols, such as ""-""](https://github.com/hans/obsidian-citation-plugin/issues/89)
+#研究/feature",4. 考量windows檔案名稱問題,"想辦法讓windows檔案名稱能支援論文標題。
+[Automatically convert colons in {{title}} to other symbols, such as ""-""]"
+8,每日筆記,列出問題,哪些因素可能會影響語音識別的準確度?,降噪、聲道、取樣率、語速、bit率,,['每日筆記/2023-09-22'],"# 3. 除了降噪外其他可能影響語音識別的因素
+#靈感/語音識別
+1. 聲道
+2. 取樣率
+3. 語速
+4. bit率
+",3. 除了降噪外其他可能影響語音識別的因素,"# 3. 除了降噪外其他可能影響語音識別的因素
+1. 聲道
+2. 取樣率
+3. 語速
+4. bit率"
+9,每日筆記,,如何微調whisper?,參考Whisper-Finetune#0924實驗筆記,,['每日筆記/2023-09-25' '每日筆記/2023-10-05'],"# 1. [[Whisper-Finetune]]
+根據範例提供的簡體中文資料集做微調
+[@buAISHELL1OpenSourceMandarin2017]
+記錄在[[Whisper-Finetune#0924實驗]]
+然而合併Lora檔後跑出來的模型格式不一樣，不知道能不能直接用。
+- [ ] 模型格式問題(@2023-10-20)
+
+
+",1. [[Whisper-Finetune]],"# 1. [[Whisper-Finetune]]
+根據範例提供的簡體中文資料集做微調
+[@buAISHELL1OpenSourceMandarin2017]
+記錄在[[Whisper-Finetune#0924實驗]]"
+10,每日筆記,簡單問題,如何解決protégé中的顯示問題?,下載zip檔，修改dot.exe的路徑設定,,['每日筆記/2023-10-02'],"# 4. 修復protege中的 [[OwlViz]] 全部擠在左上角的問題
+到 https://graphviz.org/download/ 下載zip檔，修改dot.exe的路徑設定",4. 修復protege中的 [[OwlViz]] 全部擠在左上角的問題,"# 4. 修復protege中的 [[OwlViz]] 全部擠在左上角的問題
+到 https://graphviz.org/download/ 下載zip檔，修改dot.exe的路徑設定"
+11,每日筆記,簡單問題,為甚麼系統要使用多執行緒?,避免資料庫IO讓websocket停下來。,,['每日筆記/2023-12-23'],"# 2. 在做資料庫IO的時候好像會讓websocket也暫時停下來，應該是單執行緒的問題
+- 可能可以考慮讓DB那部分用另一個執行緒處理",2. 在做資料庫IO的時候好像會讓websocket也暫時停下來，應該是單執行緒的問題,"# 2. 在做資料庫IO的時候好像會讓websocket也暫時停下來，應該是單執行緒的問題
+- 可能可以考慮讓DB那部分用另一個執行緒處理"
+12,每日筆記,事實問題,service worker幾秒後會自動關閉?,30秒,,['每日筆記/2023-12-25'],"# 3. 根據chrome extensione官方說明，30秒會自動將service worker關閉，因此採用25秒一次的心跳來解決這個問題[^1]
+- 之後如果確認後端不會主動傳訊息給SW，則可以考慮改為http ( 只要修改send函數應該就行了 )
+
+
+",3. 根據chrome extensione官方說明，30秒會自動將service worker關閉，因此採用25秒一次的心跳來解決這個問題[^1],根據chrome extensione官方說明，30秒會自動將service worker關閉
+13,每日筆記,事實問題,為什麼chrome-extension不能在html中直接呼叫javascript函數,因為chrome-extension不允許CSP,,['每日筆記/2023-12-28'],"# 9. 關於chrome-extension中不允許在html中直接呼叫javascript函數
+- 因為chrome-extension不允許CSP
+- 但好像可以用[這個](https://stackoverflow.com/questions/72186787/chrome-extensions-and-csp)允許特定網站的CSP?
+
+",9. 關於chrome-extension中不允許在html中直接呼叫javascript函數,關於chrome-extension中不允許在html中直接呼叫javascript函數 – 因為chrome-extension不允許CSP
+14,每日筆記,事實問題,ChatGPT的溫度設為多少最恰當?,0度,,['每日筆記/2024-03-13'],"# 4. 閱讀論文
+- 在這篇[^4] 論文中提到，實驗中為了在最小化幻覺和嚴格生成之間取得平衡，將ChatGPT的溫度設為0，llama的溫度設為0.1，但論文中未提及更詳細的理由
+
+",4. 閱讀論文,在這篇[^4] 論文中提到，實驗中為了在最小化幻覺和嚴格生成之間取得平衡，將ChatGPT的溫度設為0
+15,每日筆記,簡單問題,嵌入有可能遇到什麼問題?,markdown語意、顯卡負擔,,['每日筆記/2024-03-15'],"# 4. 嵌入模型真的能理解markdown的語意嗎?
+- 顯卡撐不住LLM + 向量化 + FAISS",4. 嵌入模型真的能理解markdown的語意嗎?,"# 4. 嵌入模型真的能理解markdown的語意嗎?
+- 顯卡撐不住LLM + 向量化 + FAISS"
+16,每日筆記,簡單問題,有哪些方法可以解決語音辨識的幻聽問題,加上參數--condition_on_previous_text False,,['每日筆記/2023-09-16'],"# 1. [[Whisper]]
+嘗試解決幻覺問題
+https://github.com/openai/whisper/discussions/679
+加上參數--condition_on_previous_text False
+
+## 評估方式?
+根據不同面向，例如冗字、專有名詞，其他錯誤等
+
+又加了一堆論文哈哈",1. [[Whisper]],"# 1. [[Whisper]]
+嘗試解決幻覺問題
+https://github.com/openai/whisper/discussions/679
+加上參數--condition_on_previous_text False
+
+## 評估方式?
+根據不同面向，例如冗字、專有名詞，其他錯誤等
+
+又加了一堆論文哈哈"
+17,每日筆記,簡單問題,語音辨識可以有哪些評估的方向,冗字、專有名詞，其他錯誤等,,['每日筆記/2023-09-16'],"# 1. [[Whisper]]
+嘗試解決幻覺問題
+https://github.com/openai/whisper/discussions/679
+加上參數--condition_on_previous_text False
+
+##  評估方式?
+根據不同面向，例如冗字、專有名詞，其他錯誤等
+
+又加了一堆論文哈哈",1. [[Whisper]],"# 1. [[Whisper]]
+嘗試解決幻覺問題
+https://github.com/openai/whisper/discussions/679
+加上參數--condition_on_previous_text False
+
+## 評估方式?
+根據不同面向，例如冗字、專有名詞，其他錯誤等
+
+又加了一堆論文哈哈"
+18,每日筆記,簡單問題,為什麼瀏覽器插件不使用pipe?,javascript無法操作作業系統層級的pipe,,['每日筆記/2023-09-20'],"# 3. 關於瀏覽器插件的溝通方式選擇
+pipe or websocket
+選擇websocket，因為javascript無法操作作業系統層級的pipe
+查不太到實際說明，但參考[^1] ，看起來必須通過node.js才能使JS使用OS層級的pipe
+理論上也確實如此，否則瀏覽器插件的權限很容易太大
+
+
+
+",3. 關於瀏覽器插件的溝通方式選擇,"# 3. 關於瀏覽器插件的溝通方式選擇
+pipe or websocket
+選擇websocket，因為javascript無法操作作業系統層級的pipe
+查不太到實際說明，但參考[^1] ，看起來必須通過node.js才能使JS使用OS層級的pipe
+理論上也確實如此，否則瀏覽器插件的權限很容易太大"
+19,每日筆記,簡單問題,什麼是OpenCitations,一種學術知識圖譜,,['每日筆記/2024-01-21'],"## 學術知識圖譜
+- Microsoft KG
+	- 最大的免費學術數據集(2.6E)
+	- 已停用，改為OpenAlex
+- OpenAIRE
+- OpenAlex
+- AMiner
+- Open Research KG (ORKG)
+	- 10K篇包含方法、資料集、評估方法
+- Artificial Intelligence KG(AI-KG)
+- SciGraph
+- ScholarlyData
+- PID Graph
+- OpenCitations
+- AIDA = 2500W MAG + 800W Dimensions(專利)
+	- 改用OpenAlex + DBLP
+	- 選擇的理由: 包含研究領域的複雜表示[74]
+- Scopus
+	- 常用的影響力指標
+	- 不如MAG全面[68]",相關研究,"## 學術知識圖譜
+- Microsoft KG
+	- 最大的免費學術數據集(2.6E)
+	- 已停用，改為OpenAlex
+- OpenAIRE
+- OpenAlex
+- AMiner
+- Open Research KG (ORKG)
+	- 10K篇包含方法、資料集、評估方法
+- Artificial Intelligence KG(AI-KG)
+- SciGraph
+- ScholarlyData
+- PID Graph
+- OpenCitations
+- AIDA = 2500W MAG + 800W Dimensions(專利)
+	- 改用OpenAlex + DBLP
+	- 選擇的理由: 包含研究領域的複雜表示[74]
+- Scopus
+	- 常用的影響力指標
+	- 不如MAG全面[68]"
+20,每日筆記,簡單問題,我參考了哪個教學將pytorch更新到pytorch2?,https://home.gamer.com.tw/artwork.php?sn=5701595,涉及markdown引用,['每日筆記/2023-09-30'],"# 3. 將宿舍電腦的 StableDiffusion 虛擬環境中的 [[pytorch]] 更新到pytorch2[^1]
+1. 切換到虛擬環境
+   `.\envs\scripts\activate.bat`
+2. 檢查pip路徑
+   `pip --version`
+3. 參考[官網](https://pytorch.org/get-started/locally/)訊息，CUDA11.8
+   `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`
+4. 結果
+	```
+	Installing collected packages: mpmath, sympy, torch, torchvision, torchaudio
+  Attempting uninstall: torch
+    Found existing installation: torch 1.13.1+cu117
+    Uninstalling torch-1.13.1+cu117:
+      Successfully uninstalled torch-1.13.1+cu117
+	  Attempting uninstall: torchvision
+    Found existing installation: torchvision 0.14.1+cu117
+    Uninstalling torchvision-0.14.1+cu117:
+      Successfully uninstalled torchvision-0.14.1+cu117
+	ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+	xformers 0.0.20 requires pyre-extensions==0.0.29, which is not installed.
+	Successfully installed mpmath-1.3.0 sympy-1.12 torch-2.0.1+cu118 torchaudio-2.0.2+cu118 torchvision-0.15.2+cu118
+	```
+5. 直接解除安裝xformers，若需要之後再裝
+6. 測試
+7. 似乎沒問題
+
+
+[^1]: https://home.gamer.com.tw/artwork.php?sn=5701595",3. 將宿舍電腦的 StableDiffusion 虛擬環境中的 [[pytorch]] 更新到pytorch2[^1],"# 3. 將宿舍電腦的 StableDiffusion 虛擬環境中的 [[pytorch]] 更新到pytorch2[^1]
+1. 切換到虛擬環境
+   `.\envs\scripts\activate.bat`
+2. 檢查pip路徑
+   `pip --version`
+3. 參考[官網](https://pytorch.org/get-started/locally/)訊息，CUDA11.8
+   `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`
+4. 結果
+	```
+	Installing collected packages: mpmath, sympy, torch, torchvision, torchaudio
+  Attempting uninstall: torch
+    Found existing installation: torch 1.13.1+cu117
+    Uninstalling torch-1.13.1+cu117:
+      Successfully uninstalled torch-1.13.1+cu117
+	  Attempting uninstall: torchvision
+    Found existing installation: torchvision 0.14.1+cu117
+    Uninstalling torchvision-0.14.1+cu117:
+	```
+5. 直接解除安裝xformers，若需要之後再裝
+6. 測試
+7. 似乎沒問題
+
+
+[^1]: https://home.gamer.com.tw/artwork.php?sn=5701595"
+21,每日筆記,簡單問題,bibtex和ris差在哪？,bibtex的相容性更好,,['每日筆記/2023-11-15'],"# 1. 考慮和 [[EndNote]] 連動的可能性
+- [[websocket]] 攔截
+- [[RIS]] 等引用文件
+- 文獻清單
+- 其實 [[Bibtex]] 應該更適合作為相容性最好的引用格式而非[[RIS]]
+
+",1. 考慮和 [[EndNote]] 連動的可能性,"# 1. 考慮和 [[EndNote]] 連動的可能性
+- [[websocket]] 攔截
+- [[RIS]] 等引用文件
+- 文獻清單
+- 其實 [[Bibtex]] 應該更適合作為相容性最好的引用格式而非[[RIS]]"
+22,每日筆記,簡單問題,可以從論文的相關研究中得到什麼？,作者對於其他研究的評價,涉及整理,['每日筆記/2023-11-23'],"# 2. 研究過程中，除了這個研究的貢獻外，在相關研究中也可以得到很多資訊
+可以在筆記中包含，提到這篇研究的研究、該研究中的說明、作者評價、引用編號等
+#靈感 
+
+
+",2. 研究過程中，除了這個研究的貢獻外，在相關研究中也可以得到很多資訊,"# 2. 研究過程中，除了這個研究的貢獻外，在相關研究中也可以得到很多資訊
+可以在筆記中包含，提到這篇研究的研究、該研究中的說明、作者評價、引用編號等"
+23,每日筆記,無法回答,土豆挑戰是什麼？,資訊不足,資訊不足,['每日筆記/2023-12-04'],# 5. 土豆挑戰,5. 土豆挑戰,# 5. 土豆挑戰
+24,每日筆記,簡單問題,如何解決The message port closed before a response was received,正確的使用sendmessage的callback的第三個參數sendResponse完成完整的溝通,,['每日筆記/2023-12-08'],"# 1. 撰寫chrome extension
+- 關於popus.js和background.js的溝通
+	- 遇到錯誤 `Unchecked runtime.lastError: The message port closed before a response was received.`
+	- 經過正確的使用sendmessage的callback的第三個參數sendResponse完成完整的溝通。
+- 準確的說是service-worker，因為在版本三中並沒有background page的存在，而是改為service worker。
+- 同上，有很多用法在第二版可以用，但在第三版不能用。
+
+",1. 撰寫chrome extension,"# 1. 撰寫chrome extension
+- 關於popus.js和background.js的溝通
+	- 遇到錯誤 `Unchecked runtime.lastError: The message port closed before a response was received.`
+	- 經過正確的使用sendmessage的callback的第三個參數sendResponse完成完整的溝通。
+- 準確的說是service-worker，因為在版本三中並沒有background page的存在，而是改為service worker。
+- 同上，有很多用法在第二版可以用，但在第三版不能用。
+
+"
+25,每日筆記,列出問題,哪些python套件能監聽快捷鍵？,pynput、global-hotkey、keyboard,,['每日筆記/2023-12-22'],"# 2. python的系統級快捷鍵
+- 自己實驗，如果把ctrl按住可能使的快捷鍵的反應不一樣，例如如果不放開ctrl就輸入下一個快捷鍵，有時候會沒反應。(在global-hotkeys的[範例程式碼](https://pypi.org/project/global-hotkeys/)中發生)
+## 20231222實驗
+- 全域熱鍵(global hotkey)
+- 可能需要和系統API溝通，例如win32api、/dev/input等[^1]
+	- 相關套件: pynput、[global-hotkeys](https://pypi.org/project/global-hotkeys/)、[keyboard](https://pypi.org/project/keyboard/)
+		- 關於global-hotkeys: 看起來還有再維護，使用win32api
+		- 關於keyboard: 已停止維護，但看起來輕量很多，且自動內建多執行緒
+			- 在linux下因為沒有依賴xlib，因此需要sudo權限讀取/dev/input
+			- [其他相關的中文說明](https://juejin.cn/post/7116757606709854222)
+- 其他套件，例如keyboard
+	- 原理?
+
+- 結合多執行緒(thread)
+- 遇到問題: ctrl+c無法關閉python
+	- 結合[這個](https://stackoverflow.com/questions/11815947/cannot-kill-python-script-with-ctrl-c)及其他相關問題，猜測原因是thread不屬於daemon，因此ctrl+c只能關閉主thread而管不了子thread ⇒ 從terminal看起來就像是無法結束
+	- 若使用setDaemon等方式設定成daemon，則主thread結束時就會自動將子thread關閉
+	- 因此要維持主thread運行，例如while + time.sleep(1)
+	- 註: daemon關閉時會強制關閉，若有讀寫檔、暫存檔等需要額外處理，例如在主thread中捕捉相關的事件。
+
+- ChatGPT用模擬ctrl+c的方式實現自訂義複製快捷鍵，我喜歡
+	- 本來無法模擬ctrl+c，後來發現是因為模擬前沒有放開實體按鍵，使用time.sleep或keyboard.release都能解決這個問題，也不需要管理員權限
+	
+- 讀取當前焦點視窗
+	- 暫時先考慮windows，不考慮mac和linux，因此使用pywin32
+
+- [[cypher]] 的參數化查詢無法用於標籤或關係上，因此需要使用python的格式化輸入來處理
+	`query = f""MATCH (n:{tagName})""`",2. python的系統級快捷鍵,"# 2. python的系統級快捷鍵
+- 自己實驗，如果把ctrl按住可能使的快捷鍵的反應不一樣，例如如果不放開ctrl就輸入下一個快捷鍵，有時候會沒反應。(在global-hotkeys的[範例程式碼](https://pypi.org/project/global-hotkeys/)中發生)
+## 20231222實驗
+- 全域熱鍵(global hotkey)
+- 可能需要和系統API溝通，例如win32api、/dev/input等[^1]
+	- 相關套件: pynput、[global-hotkeys](https://pypi.org/project/global-hotkeys/)、[keyboard](https://pypi.org/project/keyboard/)
+		- 關於global-hotkeys: 看起來還有再維護，使用win32api
+		- 關於keyboard: 已停止維護，但看起來輕量很多，且自動內建多執行緒
+			- 在linux下因為沒有依賴xlib，因此需要sudo權限讀取/dev/input
+			- [其他相關的中文說明](https://juejin.cn/post/7116757606709854222)
+- 其他套件，例如keyboard
+	- 原理?
+
+- 結合多執行緒(thread)
+- 遇到問題: ctrl+c無法關閉python
+	- 結合[這個](https://stackoverflow.com/questions/11815947/cannot-kill-python-script-with-ctrl-c)及其他相關問題，猜測原因是thread不屬於daemon，因此ctrl+c只能關閉主thread而管不了子thread ⇒ 從terminal看起來就像是無法結束
+	- 若使用setDaemon等方式設定成daemon，則主thread結束時就會自動將子thread關閉
+	- 因此要維持主thread運行，例如while + time.sleep(1)
+	- 註: daemon關閉時會強制關閉，若有讀寫檔、暫存檔等需要額外處理，例如在主thread中捕捉相關的事件。
+
+- ChatGPT用模擬ctrl+c的方式實現自訂義複製快捷鍵，我喜歡
+	- 本來無法模擬ctrl+c，後來發現是因為模擬前沒有放開實體按鍵，使用time.sleep或keyboard.release都能解決這個問題，也不需要管理員權限
+	
+- 讀取當前焦點視窗
+	- 暫時先考慮windows，不考慮mac和linux，因此使用pywin32
+
+- [[cypher]] 的參數化查詢無法用於標籤或關係上，因此需要使用python的格式化輸入來處理
+	`query = f""MATCH (n:{tagName})""`"
+26,每日筆記,列出問題,除了pyqt外，當時還考慮哪些類似的套件？,Tkinter、kivy、DearPyGui,,['每日筆記/2023-12-24'],"# 1. [[PyQt]] or [[Tkinter]] or [[kivy]] or [[DearPyGui]] 等等等
+- 程式複雜度: 以後可能會涉及樹、資料庫、影片及圖片的顯示等
+- 開發方便性: PyQt的GUI生成好像比較方便
+- 可移植性: 不會在手機所以不考慮kivy
+- 效能: 感覺呼叫瀏覽器視窗會比較不好? 之後可能要再實驗
+- 暫時先選擇PyQt
+
+
+",1. [[PyQt]] or [[Tkinter]] or [[kivy]] or [[DearPyGui]] 等等等,"# 1. [[PyQt]] or [[Tkinter]] or [[kivy]] or [[DearPyGui]] 等等等
+- 程式複雜度: 以後可能會涉及樹、資料庫、影片及圖片的顯示等
+- 開發方便性: PyQt的GUI生成好像比較方便
+- 可移植性: 不會在手機所以不考慮kivy
+- 效能: 感覺呼叫瀏覽器視窗會比較不好? 之後可能要再實驗
+- 暫時先選擇PyQt"
+27,每日筆記,簡單問題,系統中的FastAPI監聽哪個端口？,27711,,['每日筆記/2024-03-16'],"# 1. 基於研究貢獻等考量，決定將系統中原本[[WebScoket|websocket]]的部分改成[[FastAPI]]看看
+- 使用新的虛擬環境
+	- 必要套件
+		- [[fastapi]]
+			- [一篇討論](https://github.com/tiangolo/fastapi/discussions/7299)為什麼 [[FastAPI]] 搭配Uvicorn的理由，原因是該團隊相同因此能自然的搭配
+			- 依賴 [[Pydantic]]
+		- uvicorn\[standard\]
+			- 根據FastAPI[官方文檔](https://fastapi.tiangolo.com/deployment/manually/)，加上standard能安裝與效能相關的其他套件，如uvloop
+		- websockets
+			- 不然執行uvicorn會報錯
+		- aiohttp
+			- 用於發出http請求，且為非同步請求，且比起httpx更快[^1] [^2]
+		- psutil
+			- 用於取得pid等系統資訊
+		- pyqt6
+- 使用27711作為[[fastapi]]端點
+	- `uvicorn server_fastapi:app --host 0.0.0.0 --port 27711 --reload`
+	- 雖然reload很方便，但最好只在開發中使用，不然會影響效能
+- 之後可能要考量跨電腦使用LLM等服務時的加密問題
+
+
+",1. 基於研究貢獻等考量，決定將系統中原本[[WebScoket|websocket]]的部分改成[[FastAPI]]看看,- 使用27711作為[[fastapi]]端點
+28,每日筆記,簡單問題,RALM類似什麼概念？,RAG,,['每日筆記/2024-04-10'],"# 3. 找到新關鍵字(ChatGPT)
+- Multi-Source Information Management
+- RALM，重要，需要了解具體定義及其與RAG的區別
+
+
+",3. 找到新關鍵字(ChatGPT),"# 3. 找到新關鍵字(ChatGPT)
+- Multi-Source Information Management
+- RALM，重要，需要了解具體定義及其與RAG的區別
+
+
+"
+29,每日筆記,簡單問題,多源資料分析和管理差在哪？,多源資料分析主要注重於統合、轉換、除錯並分析資料，而多源資訊管理則著重於蒐集與管理資訊。,,['每日筆記/2024-04-11'],"# 1. 修改論文
+- Multi-Source Data Analysis與Multi-source infomation management system
+	- 多源資料分析主要注重統合、轉換、除錯並分析資料
+	- 多源資訊管理主要目的在蒐集與管理資訊
+
+
+",1. 修改論文,"- 多源資料分析主要注重統合、轉換、除錯並分析資料
+	- 多源資訊管理主要目的在蒐集與管理資訊"
+30,每日筆記,語法問題,在2024/4/17，我看完NEUMAI了嗎？,看完了,待辦清單,['每日筆記/2024-04-17'],"# 0. 今日計畫
+- [ ] 整理文獻
+- [ ] 閱讀清單
+	- [x] [嵌入的選擇](https://medium.com/thirdai-blog/demystifying-llm-driven-search-stop-comparing-embeddings-or-vectordbs-and-start-fine-tuning-d9b6791146fe)，超重要!
+		- 本文章推廣NeuralDB，說明微調比起選擇模型更重要
+		- 但考量到中文、專有名詞、NeuralDB價格及熱門程度等，不採用
+	- [x] [中文問答數據調研](https://zhuanlan.zhihu.com/p/576399437)
+		- [[Delta Reading Comprehension Dataset]] 資料集
+	- [x] [NEUMAI](https://docs.neum.ai/get-started/introduction)
+		- 著重資料同步的框架，與研究較無相關
+
+
+- [ ] 待實驗
+	- [x] https://blog.langchain.dev/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/
+		- 一個關於langchain+neo4j問答的實作，相當值得實驗
+		- 只是將相鄰節點的資訊一起拿下來而以，還行但沒太大的用處
+	- [ ] GEMMA
+	- [ ] [[HyDE]]
+	- [ ] LLM的上下文與few-shot
+- 系統
+	- [ ] 設計整個架構和所需要的API需求及文件
+	- [ ] 浮動視窗，類似字典
+- 教育版copilot，要印英文在校證明[^6]
+
+",0. 今日計畫,"每日筆記/2024-04-17
+	- [x] [NEUMAI](https://docs.neum.ai/get-started/introduction)"
+31,每日筆記,語法問題,在2024/4/17，我做了什麼實驗？,一個關於langchain+neo4j問答的實做，https://blog.langchain.dev/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/,待辦清單,['每日筆記/2024-04-17'],"# 0. 今日計畫
+- [ ] 整理文獻
+- [ ] 閱讀清單
+	- [x] [嵌入的選擇](https://medium.com/thirdai-blog/demystifying-llm-driven-search-stop-comparing-embeddings-or-vectordbs-and-start-fine-tuning-d9b6791146fe)，超重要!
+		- 本文章推廣NeuralDB，說明微調比起選擇模型更重要
+		- 但考量到中文、專有名詞、NeuralDB價格及熱門程度等，不採用
+	- [x] [中文問答數據調研](https://zhuanlan.zhihu.com/p/576399437)
+		- [[Delta Reading Comprehension Dataset]] 資料集
+	- [x] [NEUMAI](https://docs.neum.ai/get-started/introduction)
+		- 著重資料同步的框架，與研究較無相關
+
+
+- [ ] 待實驗
+	- [x] https://blog.langchain.dev/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/
+		- 一個關於langchain+neo4j問答的實作，相當值得實驗
+		- 只是將相鄰節點的資訊一起拿下來而以，還行但沒太大的用處
+	- [ ] GEMMA
+	- [ ] [[HyDE]]
+	- [ ] LLM的上下文與few-shot
+- 系統
+	- [ ] 設計整個架構和所需要的API需求及文件
+	- [ ] 浮動視窗，類似字典
+- 教育版copilot，要印英文在校證明[^6]
+
+",0. 今日計畫,"每日筆記/2024-04-17
+- [ ] 待實驗
+	- [x] https://blog.langchain.dev/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/
+		- 一個關於langchain+neo4j問答的實作，相當值得實驗
+		- 只是將相鄰節點的資訊一起拿下來而以，還行但沒太大的用處"
+32,每日筆記,語法問題,在2024/4/17，我實驗過gemma了嗎?,還沒,待辦清單,['每日筆記/2024-04-17'],"# 0. 今日計畫
+- [ ] 整理文獻
+- [ ] 閱讀清單
+	- [x] [嵌入的選擇](https://medium.com/thirdai-blog/demystifying-llm-driven-search-stop-comparing-embeddings-or-vectordbs-and-start-fine-tuning-d9b6791146fe)，超重要!
+		- 本文章推廣NeuralDB，說明微調比起選擇模型更重要
+		- 但考量到中文、專有名詞、NeuralDB價格及熱門程度等，不採用
+	- [x] [中文問答數據調研](https://zhuanlan.zhihu.com/p/576399437)
+		- [[Delta Reading Comprehension Dataset]] 資料集
+	- [x] [NEUMAI](https://docs.neum.ai/get-started/introduction)
+		- 著重資料同步的框架，與研究較無相關
+
+
+- [ ] 待實驗
+	- [x] https://blog.langchain.dev/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/
+		- 一個關於langchain+neo4j問答的實作，相當值得實驗
+		- 只是將相鄰節點的資訊一起拿下來而以，還行但沒太大的用處
+	- [ ] GEMMA
+	- [ ] [[HyDE]]
+	- [ ] LLM的上下文與few-shot
+- 系統
+	- [ ] 設計整個架構和所需要的API需求及文件
+	- [ ] 浮動視窗，類似字典
+- 教育版copilot，要印英文在校證明[^6]
+
+",0. 今日計畫,"每日筆記/2024-04-17
+- [ ] 待實驗
+	- [ ] GEMMA"
+33,每日筆記,語法問題,在2024/4/17，我設計完整個架構和所需要的API需求及文件了嗎？,還沒,待辦清單,['每日筆記/2024-04-17'],"# 0. 今日計畫
+- [ ] 整理文獻
+- [ ] 閱讀清單
+	- [x] [嵌入的選擇](https://medium.com/thirdai-blog/demystifying-llm-driven-search-stop-comparing-embeddings-or-vectordbs-and-start-fine-tuning-d9b6791146fe)，超重要!
+		- 本文章推廣NeuralDB，說明微調比起選擇模型更重要
+		- 但考量到中文、專有名詞、NeuralDB價格及熱門程度等，不採用
+	- [x] [中文問答數據調研](https://zhuanlan.zhihu.com/p/576399437)
+		- [[Delta Reading Comprehension Dataset]] 資料集
+	- [x] [NEUMAI](https://docs.neum.ai/get-started/introduction)
+		- 著重資料同步的框架，與研究較無相關
+
+
+- [ ] 待實驗
+	- [x] https://blog.langchain.dev/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/
+		- 一個關於langchain+neo4j問答的實作，相當值得實驗
+		- 只是將相鄰節點的資訊一起拿下來而以，還行但沒太大的用處
+	- [ ] GEMMA
+	- [ ] [[HyDE]]
+	- [ ] LLM的上下文與few-shot
+- 系統
+	- [ ] 設計整個架構和所需要的API需求及文件
+	- [ ] 浮動視窗，類似字典
+- 教育版copilot，要印英文在校證明[^6]
+
+",0. 今日計畫,"每日筆記/2024-04-17
+- [ ] 待實驗
+	- [ ] 設計整個架構和所需要的API需求及文件"
+34,每日筆記,簡單問題,我對ChatRTX的評價是正面還是負面,負面,,['每日筆記/2024-04-17'],"# 2. 試用 [[Chat RTX]]
+- 38G，好大
+- 下載好久，安裝好久，安裝一個多小時吧，包含下載模型的時間
+- 吃爆VRAM、反應不快，基本只收英文
+- 因為很卡所以沒有繼續測試下去
+
+ 
+[^3]: https://www.volcengine.com/theme/3863827-W-7-1
+[^4]: https://www.pythonforbeginners.com/basics/convert-ini-to-yaml-in-python
+[^5]: https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms
+[^6]: https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E7%94%A8%E8%80%81%E5%B8%AB-%E5%AD%B8%E7%94%9F%E8%BA%AB%E4%BB%BD%E5%85%8D%E8%B2%BB%E4%BD%BF%E7%94%A8-github-copilot-223236e0e0e8",2. 試用 [[Chat RTX]],"# 2. 試用 [[Chat RTX]]
+- 38G，好大
+- 下載好久，安裝好久，安裝一個多小時吧，包含下載模型的時間
+- 吃爆VRAM、反應不快，基本只收英文
+- 因為很卡所以沒有繼續測試下去
+"
+35,每日筆記,簡單問題,在2024/4/21，我總共花了幾分鐘跑實驗,100分鐘,時間計算,['每日筆記/2024-04-21'],"# 2. 跑實驗
+- google/gemma-2b-it
+	- 約20分鐘
+- google/gemma-2b
+	- 約20分鐘
+- meta-llama/Llama-2-7b-chat-hf
+	- 約一小時
+",2. 跑實驗,"# 2. 跑實驗
+- google/gemma-2b-it
+	- 約20分鐘
+- google/gemma-2b
+	- 約20分鐘
+- meta-llama/Llama-2-7b-chat-hf
+	- 約一小時"

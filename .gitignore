@@ -1,0 +1,11 @@
+log/*
+__pycache__/*
+*.pyc
+data/History.db
+data/History.db.bak
+data/db/*
+Taiwan-LLM/*
+config.yaml
+data/History
+TagList.txt
+data/log/*

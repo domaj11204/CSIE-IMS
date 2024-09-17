@@ -1,0 +1,32 @@
+{
+    "llama":{
+        "普通":"<s>[INST] {USER} [/INST]",
+        "系統":"<s>[INST] <<SYS>>\n{sys}\n<</SYS>>\n\n{USER} [/INST]",
+        "多輪":"<s>[INST] <<SYS>>\n{sys}\n<</SYS>>\n\n{question1} [/INST] {answer1} </s><s>[INST] {question2} [/INST]"
+    },
+    "Gemma":{
+        "普通":"<start_of_turn>user{USER}<end_of_turn>\n<start_of_turn>model\n",
+        "系統":"{sys}<start_of_turn>user{USER}<end_of_turn>\n<start_of_turn>model\n",
+        "多輪":"{sys}<start_of_turn>user{question1}<end_of_turn>\n<start_of_turn>model{answer1}<end_of_turn>\n<start_of_turn>user{question2}<end_of_turn>\n<start_of_turn>model"
+    },
+    "ChatML":{
+        "//":"https://huggingface.co/adamo1139/Yi-34B-200K-AEZAKMI-v2",
+        "系統":"<|im_start|>system\n{sys}<|im_end|>\n<|im_start|>user\n{USER}<|im_end|>\n<|im_start|>assistant"
+    },
+    "llama3":{
+        "//": "https://github.com/meta-llama/llama3?tab=readme-ov-file#instruction-tuned-models",
+        "系統":"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{sys}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{USER}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+        "多輪":"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{sys}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{question1}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{answer1}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{question2}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+              },
+    "其他":{
+        "系統": "SYSTEM: {sys}\nUSER: {USER}\nASSISTANT:",
+        "US": "USER:{USER} SYSTEM:",
+        "UA": "USER: {USER} ASSISTANT:",
+        "UAN": "USER: {USER}\nASSISTANT:",
+        "QA": "Question: {USER}\nAnswer:",
+        "HC": "Human:{USER}\nChatbot:",
+        "HA": "Human:{USER}\nAI:",
+        "UA+":"### USER: {USER}\n### ASSISTANT: ",
+        "系統HA": "System: {sys}\nHuman: {USER}"
+    }
+}

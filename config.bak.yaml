@@ -1,0 +1,66 @@
+obsidian:
+  authorization: 
+  exclude_path: '["template"]'
+  path: D:\Obsidian\
+  url: http://127.0.0.1:27123
+  source: true
+chrome:
+  history_path: C:\Users\LoChiaHung\AppData\Local\Google\Chrome\User Data\Profile 3\History
+  url: http://127.0.0.1
+  source: true
+llm:
+  tgi_url: http://10.147.19.2:8080
+  openai-like-url: http://10.147.19.2:8080/api/v1/complete
+  source: true
+embedded:
+  url: http://10.147.19.2:8000
+  path: D:\Obsidian\每日筆記
+  dataset_path: .\data\noteqa.json
+  db_path: ./data/db/chromadb
+  chunk_size: 1024
+  hnsw_space: l2 # l2 cosine ip
+  
+neo4j:
+  knowledge_base:
+  - 術語
+  - 論文
+  - 人物
+  password: 
+  url: bolt://10.147.19.205:7687 # 65647e5b.databases.neo4j.io
+  user: neo4j
+  source: true
+obsidian:
+  authorization: 
+  exclude_path: '["template"]'
+  path: E:\Research\ObsidianSync\
+  url: http://127.0.0.1:27123
+  source: true
+log:
+  path: .\data\log
+shortcuts:
+  search: ctrl+alt+s
+  add: ctrl+alt+a
+  export: ctrl+alt+e
+FastAPI:
+  host: "0.0.0.0"
+  port: "27711"
+  url: 127.0.0.1:27711
+reference:
+  path: ./data/reference.csv
+rag:
+  embedded_model: BAAI/bge-m3  # text-embedding-ada-002 BAAI/bge-m3
+  llm_model: gpt-4o # gpt-4o # MediaTek-Research/Breeze-7B-Instruct-v0_1 qwen1_5-32b-chat
+  retrieval_method:
+    - similarity # chroma_similarity bm25 ContextualCompressionRetriever
+    - ContextualCompressionRetriever
+  top_k: 1
+  similarity_k: 10
+  use_langchain: true
+  prompt_template: |
+    不要使用參考文獻以外的知識或資訊。若資訊不足請回答「資訊不足」。
+    ==參考文獻==
+    {context}
+
+    ==問題==
+    根據上文，{question}
+    請用20個字簡潔回答問題。

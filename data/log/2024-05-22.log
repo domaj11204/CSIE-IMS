@@ -1,0 +1,266 @@
+Active code page: 437
+Active code page: 437
+
+(base) E:\Research\extension\chrome-extension>chcp 65001
+Active code page: 65001
+
+(base) E:\Research\extension\chrome-extension>[11:37:23]ffmpeg
+ffmpeg version 5.1.1-full_build-www.gyan.dev Copyright (c) 2000-2022 the FFmpeg developers
+  built with gcc 12.1.0 (Rev2, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libmfx --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+Hyper fast Audio and Video encoder
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+Use -h to get full help or, even better, run 'man ffmpeg'
+
+(base) E:\Research\extension\chrome-extension>[11:37:30]conda env list
+# conda environments:
+#
+                         C:\ProgramData\MiniConda
+                         C:\Users\BlackCat\AppData\Local\NVIDIA\ChatWithRTX\env_nvd_rag
+base                  *  D:\ProgramData\Anaconda3
+ChatPaperXmind           D:\ProgramData\Anaconda3\envs\ChatPaperXmind
+LaWGPT                   D:\ProgramData\Anaconda3\envs\LaWGPT
+ML                       D:\ProgramData\Anaconda3\envs\ML
+SMed                     D:\ProgramData\Anaconda3\envs\SMed
+SMed2                    D:\ProgramData\Anaconda3\envs\SMed2
+StableDiffusionWebui     D:\ProgramData\Anaconda3\envs\StableDiffusionWebui
+TLLM                     D:\ProgramData\Anaconda3\envs\TLLM
+aboutpdf                 D:\ProgramData\Anaconda3\envs\aboutpdf
+auto-eval                D:\ProgramData\Anaconda3\envs\auto-eval
+azure                    D:\ProgramData\Anaconda3\envs\azure
+bloom_zh                 D:\ProgramData\Anaconda3\envs\bloom_zh
+chatdoctor               D:\ProgramData\Anaconda3\envs\chatdoctor
+dollyv2                  D:\ProgramData\Anaconda3\envs\dollyv2
+dpr                      D:\ProgramData\Anaconda3\envs\dpr
+excel                    D:\ProgramData\Anaconda3\envs\excel
+llama2                   D:\ProgramData\Anaconda3\envs\llama2
+openie6                  D:\ProgramData\Anaconda3\envs\openie6
+privategpt               D:\ProgramData\Anaconda3\envs\privategpt
+screenshot               D:\ProgramData\Anaconda3\envs\screenshot
+server                   D:\ProgramData\Anaconda3\envs\server
+speech                   D:\ProgramData\Anaconda3\envs\speech
+sqlmap                   D:\ProgramData\Anaconda3\envs\sqlmap
+test                     D:\ProgramData\Anaconda3\envs\test
+websocket                D:\ProgramData\Anaconda3\envs\websocket
+whisper                  D:\ProgramData\Anaconda3\envs\whisper
+whisper_cpu              D:\ProgramData\Anaconda3\envs\whisper_cpu
+whisper_finetune         D:\ProgramData\Anaconda3\envs\whisper_finetune
+excel                    d:\ProgramData\Anaconda3\envs\excel
+test                     d:\ProgramData\Anaconda3\envs\test
+
+
+(base) E:\Research\extension\chrome-extension>[11:38:10]conda activate server
+
+(server) E:\Research\extension\chrome-extension>[11:38:29]python test.py
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Research\extension\chrome-extension\test.py", line 3, in <module>
+    print(response.json()["result"])
+          ^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+(server) E:\Research\extension\chrome-extension>[11:38:37]exit
+Active code page: 437
+Active code page: 437
+
+(base) E:\Research\extension\chrome-extension>chcp 65001
+Active code page: 65001
+
+(base) E:\Research\extension\chrome-extension>[11:41:20]conda activate server
+
+(server) E:\Research\extension\chrome-extension>[11:41:35]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 39, in <module>
+    log_source = log_source(config["log"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 6, in __init__
+    self.parse_file()
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 25, in parse_file
+    re_str = '|'.join(result)
+                      ^^^^^^
+UnboundLocalError: cannot access local variable 'result' where it is not associated with a value
+
+(server) E:\Research\extension\chrome-extension>[11:44:02]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 39, in <module>
+    log_source = log_source(config["log"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 6, in __init__
+    self.parse_file()
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 26, in parse_file
+    pattern = re.compile(re_str)
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\__init__.py", line 227, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\__init__.py", line 294, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_compiler.py", line 743, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 980, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 455, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 539, in _parse
+    code = _escape(source, this, state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 438, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+re.error: bad escape \R at position 53
+
+(server) E:\Research\extension\chrome-extension>[11:45:09]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 39, in <module>
+    log_source = log_source(config["log"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 6, in __init__
+    self.parse_file()
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 26, in parse_file
+    pattern = re.compile(re_str)
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\__init__.py", line 227, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\__init__.py", line 294, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_compiler.py", line 743, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 980, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 455, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 539, in _parse
+    code = _escape(source, this, state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 438, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+re.error: bad escape \R at position 53
+
+(server) E:\Research\extension\chrome-extension>[11:46:06]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 39, in <module>
+    log_source = log_source(config["log"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 6, in __init__
+    self.parse_file()
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 25, in parse_file
+    re_str = '|'.join(result)
+                      ^^^^^^
+UnboundLocalError: cannot access local variable 'result' where it is not associated with a value
+
+(server) E:\Research\extension\chrome-extension>[11:47:03]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 40, in <module>
+    log_source = log_source(config["log"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 6, in __init__
+    self.parse_file()
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 26, in parse_file
+    re_str = '|'.join(result)
+                      ^^^^^^
+UnboundLocalError: cannot access local variable 'result' where it is not associated with a value
+[]
+
+(server) E:\Research\extension\chrome-extension>[11:49:45]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 189, in _run_module_as_main
+  File "<frozen runpy>", line 159, in _get_module_details
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 16
+    command_pattern["windows"] = re.compile(r"[(]?.*[)]?.*[A-Z]:\\(?:[\w\s-]+\\)*[\w\s-]*>\[.*:.*:.*\].*\n"gm)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+(server) E:\Research\extension\chrome-extension>[11:49:52]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 40, in <module>
+    log_source = log_source(config["log"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 6, in __init__
+    self.parse_file()
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 27, in parse_file
+    pattern = re.compile(re_str)
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\__init__.py", line 227, in compile
+    return _compile(pattern, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\__init__.py", line 294, in _compile
+    p = _compiler.compile(pattern, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_compiler.py", line 743, in compile
+    p = _parser.parse(p, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 980, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 455, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 539, in _parse
+    code = _escape(source, this, state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\re\_parser.py", line 438, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+re.error: bad escape \R at position 53
+['(base) E:\\Research\\extension\\chrome-extension>[11:37:23]ffmpeg\n', '(base) E:\\Research\\extension\\chrome-extension>[11:37:30]conda env list\n', '(base) E:\\Research\\extension\\chrome-extension>[11:38:10]conda activate server\n', '(server) E:\\Research\\extension\\chrome-extension>[11:38:29]python test.py\n', '(server) E:\\Research\\extension\\chrome-extension>[11:38:37]exit\n']
+
+(server) E:\Research\extension\chrome-extension>[12:02:59]python -m modules.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 58, in <module>
+    log_source = log_source(config["log"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 6, in __init__
+    self.parse_file()
+  File "E:\Research\extension\chrome-extension\modules\log.py", line 32, in parse_file
+    final_result[log_file].append({
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

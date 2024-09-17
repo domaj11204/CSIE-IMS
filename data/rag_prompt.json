@@ -1,0 +1,12 @@
+{
+    
+}
+    "You are a chatbot having a conversation with a human.\nGiven the following extracted parts of a long document and a question, create a final answer.\n{context}\n{query}",
+    "Follow exactly those 3 steps:\n1.  Read the context below and aggregrate this data\nContext : {context}\n2. Answer the question using only this context\n3. Show the source for your answers\nUser Question: {query}\nIf you don't have any context and are unsure of the answer, reply that you don't know about this topic and are always learning.",
+    # https://medium.com/google-cloud/generative-ai-document-retrieval-and-question-answering-with-llms-2b0fb80ae76d
+    "### INSTRUCTION: 請根據 REF 回答 USER 的問題\n### REF: {context}\n### USER: {query}\n### ASSISTANT:", #https://ithelp.ithome.com.tw/articles/10335721
+    "You are a helpful and informative bot that answers questions using text from the reference passage included below. \nBe sure to respond in a complete sentence, being comprehensive, including all relevant background information. \nHowever, you are talking to a non-technical audience, so be sure to break down complicated concepts and \nstrike a friendly and converstional tone. \nIf the passage is irrelevant to the answer, you may ignore it.\nQUESTION: '{query}'\nPASSAGE: '{context}'\nANSWER:",
+    "{context}\n請根據上述知識，經過融會貫通後，以繁體中文回答以下問題。\n{query}\n",
+    "You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\nQuestion: {query}\nContext: {context}\nAnswer:", # https://smith.langchain.com/hub/demobylxl/rag-prompt
+    "你是一位專業的研究者。根據下面的情境片段來回答最後的問題。如果你不知道答案，請坦率地說你不知道，不要試圖胡亂編造答案。如果問題與上下文或聊天歷史無關，請禮貌地回應說你只回答與上下文相關的問題。<context>\n{context}\n</context>\n{query}", ## https://smith.langchain.com/hub/demobylxl/rag-prompt
+    ] 

@@ -1,0 +1,1438 @@
+Active code page: 437
+Active code page: 437
+
+(base) E:\Research\extension\chrome-extension>chcp 65001
+Active code page: 65001
+
+(base) E:\Research\extension\chrome-extension>[06:19:51]conda activate sever
+
+EnvironmentNameNotFound: Could not find conda environment: sever
+You can list all discoverable environments with `conda info --envs`.
+
+
+
+(base) E:\Research\extension\chrome-extension>[06:19:57]conda activer server
+usage: conda-script.py [-h] [--no-plugins] [-V] COMMAND ...
+conda-script.py: error: argument COMMAND: invalid choice: 'activer' (choose from 'clean', 'compare', 'config', 'create', 'info', 'init', 'install', 'list', 'notices', 'package', 'remove', 'uninstall', 'rename', 'run', 'search', 'update', 'upgrade', 'doctor', 'debug', 'render', 'develop', 'build', 'env', 'verify', 'skeleton', 'token', 'metapackage', 'server', 'repo', 'inspect', 'convert', 'content-trust', 'index')
+
+(base) E:\Research\extension\chrome-extension>[06:23:52]conda activate server
+
+(server) E:\Research\extension\chrome-extension>[06:24:39]python -m modules.embedded
+警告:設定使用要付費的openapi
+資料庫已存在
+每日筆記/2023-07-24
+['每日筆記/2023-08-07.md', '每日筆記/2023-08-20.md', '每日筆記/2024-03-22.md', '每日筆記/2023-07-24.md', '每日筆記/2023-07-25.md']
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-11-21.md', '每日筆記/2023-08-03.md', '每日筆記/2023-10-03.md', '每日筆記/2023-10-18.md']
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-05-13.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-20.md']
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-09-19.md', '每日筆記/2023-11-22.md', '每日筆記/2023-08-14.md']
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-09-19.md', '每日筆記/2023-12-14.md', '每日筆記/2024-05-14.md', '每日筆記/2023-08-14.md']
+每日筆記/2023-08-30
+['每日筆記/2023-08-30.md', '每日筆記/2023-09-06.md', '每日筆記/2023-12-25.md', '每日筆記/2023-08-20.md', '每日筆記/2023-09-07.md']
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-20.md', '每日筆記/2024-03-13.md', '每日筆記/2024-05-14.md', '每日筆記/2024-05-16.md']
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-09-21.md', '每日筆記/2023-10-03.md', '每日筆記/2024-04-10.md', '每日筆記/2023-12-06.md']
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-05.md']
+每日筆記/2023-09-25
+['每日筆記/2023-09-25.md', '每日筆記/2023-10-31.md', '每日筆記/2023-11-02.md', '每日筆記/2024-02-22.md', '每日筆記/2023-09-24.md']
+每日筆記/2023-10-02
+['每日筆記/2023-10-02.md', '每日筆記/2023-07-25.md', '每日筆記/2023-10-02.md', '每日筆記/2023-10-03.md', '每日筆記/2023-10-03.md']
+每日筆記/2023-12-23
+['每日筆記/2024-03-15.md', '每日筆記/2024-03-28.md', '每日筆記/2024-05-02.md', '每日筆記/2024-04-28.md', '每日筆記/2024-04-29.md']
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-13.md', '每日筆記/2023-12-23.md', '每日筆記/2023-11-28.md', '每日筆記/2023-12-21.md']
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-12-23.md', '每日筆記/2023-09-20.md', '每日筆記/2023-09-07.md', '每日筆記/2023-12-08.md']
+每日筆記/2024-03-13
+['每日筆記/2024-05-12.md', '每日筆記/2023-09-22.md', '每日筆記/2024-05-11.md', '每日筆記/2024-04-17.md', '每日筆記/2024-01-15.md']
+每日筆記/2024-03-15
+['每日筆記/2024-02-22.md', '每日筆記/2024-03-15.md', '每日筆記/2024-03-28.md', '每日筆記/2024-03-22.md', '每日筆記/2024-01-13.md']
+每日筆記/2023-09-16
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md', '每日筆記/2023-10-29.md', '每日筆記/2023-09-28.md']
+每日筆記/2023-09-16
+['每日筆記/2023-10-13.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-05.md']
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-05.md', '每日筆記/2023-12-28.md', '每日筆記/2023-09-06.md']
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-05.md']
+每日筆記/2023-09-30
+['每日筆記/2023-10-18.md', '每日筆記/2023-11-23.md', '每日筆記/2023-10-13.md', '每日筆記/2024-03-15.md', '每日筆記/2024-01-17.md']
+每日筆記/2023-11-15
+['每日筆記/2023-11-15.md', '每日筆記/2023-11-15.md', '每日筆記/2023-10-02.md', '每日筆記/2024-04-29.md', '每日筆記/2023-11-28.md']
+每日筆記/2023-11-23
+['每日筆記/2023-10-18.md', '每日筆記/2023-10-16.md', '每日筆記/2024-03-15.md', '每日筆記/2024-01-17.md', '每日筆記/2023-11-23.md']
+每日筆記/2023-12-04
+['每日筆記/2023-12-04.md', '每日筆記/2023-10-13.md', '每日筆記/2024-04-21.md', '每日筆記/2024-03-15.md', '每日筆記/2024-04-10.md']
+每日筆記/2023-12-08
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-20.md', '每日筆記/2023-12-25.md', '每日筆記/2024-05-14.md', '每日筆記/2023-12-15.md']
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2024-03-13.md', '每日筆記/2023-12-22.md', '每日筆記/2023-12-24.md']
+每日筆記/2023-12-24
+['每日筆記/2023-12-24.md', '每日筆記/2023-12-25.md', '每日筆記/2024-05-20.md', '每日筆記/2023-12-22.md', '每日筆記/2023-12-25.md']
+每日筆記/2024-03-16
+['每日筆記/2024-03-16.md', '每日筆記/2024-03-13.md', '每日筆記/2024-05-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-16.md']
+每日筆記/2024-04-10
+['每日筆記/2024-04-29.md', '每日筆記/2024-04-10.md', '每日筆記/2023-09-26.md', '每日筆記/2024-04-28.md', '每日筆記/2024-04-10.md']
+每日筆記/2024-04-11
+['每日筆記/2024-04-11.md', '每日筆記/2024-03-15.md', '每日筆記/2023-10-16.md', '每日筆記/2024-03-28.md', '每日筆記/2023-10-13.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-10.md', '每日筆記/2024-03-28.md', '每日筆記/2024-03-22.md', '每日筆記/2024-04-17.md', '每日筆記/2024-04-07.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2024-01-21.md', '每日筆記/2024-05-18.md', '每日筆記/2023-09-24.md', '每日筆記/2024-01-11.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-21.md', '每日筆記/2024-04-27.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-07.md', '每日筆記/2024-04-26.md']
+每日筆記/2024-04-17
+['每日筆記/2023-10-16.md', '每日筆記/2024-05-02.md', '每日筆記/2024-04-07.md', '每日筆記/2024-04-28.md', '每日筆記/2024-01-11.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-04-17.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-22.md', '每日筆記/2024-04-25.md']
+每日筆記/2024-04-21
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-21.md', '每日筆記/2024-04-25.md', '每日筆記/2024-05-18.md', '每日筆記/2024-01-21.md']
+mrr: 0.6166666666666667
+top1: 0.5277777777777778
+
+(server) E:\Research\extension\chrome-extension>[06:25:39]python -m modules.embedded
+警告:設定使用要付費的openapi
+資料庫已存在
+每日筆記/2023-07-24
+['每日筆記/2023-08-20.md', '每日筆記/2023-08-07.md', '每日筆記/2023-07-25.md', '每日筆記/2023-10-26.md', '每日筆記/2023-07-24.md']
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-08-03.md', '每日筆記/2023-08-03.md', '每日筆記/2023-10-03.md', '每日筆記/2023-10-23.md']
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-03-22.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-20.md']
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-09-19.md', '每日筆記/2023-08-14.md', '每日筆記/2024-04-18.md']
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-09-19.md', '每日筆記/2023-08-14.md', '每日筆記/2023-12-14.md', '每日筆記/2023-12-21.md']
+每日筆記/2023-08-30
+['每日筆記/2023-08-20.md', '每日筆記/2023-08-30.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-08.md', '每日筆記/2023-10-26.md']
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-20.md', '每日筆記/2023-12-15.md', '每日筆記/2024-03-22.md', '每日筆記/2024-03-16.md']
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2024-01-10.md', '每日筆記/2024-02-22.md', '每日筆記/2023-12-28.md', '每日筆記/2023-09-21.md']
+每日筆記/2023-09-22
+['每日筆記/2023-10-26.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md']
+每日筆記/2023-09-25
+['每日筆記/2023-11-02.md', '每日筆記/2023-10-26.md', '每日筆記/2023-10-31.md', '每日筆記/2023-11-02.md', '每日筆記/2023-09-24.md']
+每日筆記/2023-10-02
+['每日筆記/2023-10-02.md', '每日筆記/2023-10-03.md', '每日筆記/2023-10-03.md', '每日筆記/2024-04-10.md', '每日筆記/2023-11-22.md']
+每日筆記/2023-12-23
+['每日筆記/2023-12-23.md', '每日筆記/2023-12-25.md', '每日筆記/2024-04-15.md', '每日筆記/2023-12-25.md', '每日筆記/2023-12-22.md']
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-21.md', '每日筆記/2023-12-15.md', '每日筆記/2023-12-13.md', '每日筆記/2023-12-25.md']
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-09-07.md', '每日筆記/2023-09-07.md', '每日筆記/2023-09-06.md', '每日筆記/2023-12-28.md']
+每日筆記/2024-03-13
+['每日筆記/2024-03-13.md', '每日筆記/2024-05-10.md', '每日筆記/2024-05-12.md', '每日筆記/2023-12-04.md', '每日筆記/2024-01-15.md']
+每日筆記/2024-03-15
+['每日筆記/2024-01-13.md', '每日筆記/2023-12-13.md', '每日筆記/2024-03-01.md', '每日筆記/2024-01-14.md', '每日筆記/2023-09-05.md']
+每日筆記/2023-09-16
+['每日筆記/2023-10-26.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-04.md']
+每日筆記/2023-09-16
+['每日筆記/2023-10-26.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md']
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-07.md', '每日筆記/2023-09-06.md']
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md']
+每日筆記/2023-09-30
+['每日筆記/2023-09-30.md', '每日筆記/2023-09-30.md', '每日筆記/2024-04-20.md', '每日筆記/2024-05-01.md', '每日筆記/2024-04-07.md']
+每日筆記/2023-11-15
+['每日筆記/2023-11-15.md', '每日筆記/2023-09-05.md', '每日筆記/2023-11-21.md', '每日筆記/2024-05-06.md', '每日筆記/2023-09-25.md']
+每日筆記/2023-11-23
+['每日筆記/2023-10-18.md', '每日筆記/2023-10-16.md', '每日筆記/2023-11-23.md', '每日筆記/2024-01-15.md', '每日筆記/2024-01-10.md']
+每日筆記/2023-12-04
+['每日筆記/2023-12-01.md', '每日筆記/2023-11-23.md', '每日筆記/2024-05-14.md', '每日筆記/2024-05-13.md', '每日筆記/2024-03-23.md']
+每日筆記/2023-12-08
+['每日筆記/2023-09-20.md', '每日筆記/2023-12-15.md', '每日筆記/2023-11-09.md', '每日筆記/2023-12-23.md', '每日筆記/2023-09-20.md']
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-07.md', '每日筆記/2024-03-13.md', '每日筆記/2023-12-24.md', '每日筆記/2023-09-05.md']
+每日筆記/2023-12-24
+['每日筆記/2023-12-24.md', '每日筆記/2023-12-25.md', '每日筆記/2023-12-24.md', '每日筆記/2024-05-20.md', '每日筆記/2023-12-25.md']
+每日筆記/2024-03-16
+['每日筆記/2024-03-13.md', '每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-16.md', '每日筆記/2023-09-20.md']
+每日筆記/2024-04-10
+['每日筆記/2024-04-09.md', '每日筆記/2023-09-26.md', '每日筆記/2024-04-10.md', '每日筆記/2024-04-07.md', '每日筆記/2024-04-09.md']
+每日筆記/2024-04-11
+['每日筆記/2024-04-11.md', '每日筆記/2024-05-03.md', '每日筆記/2024-03-15.md', '每日筆記/2023-11-23.md', '每日筆記/2024-03-28.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-10.md', '每日筆記/2024-03-23.md', '每日筆記/2024-04-16.md', '每日筆記/2024-03-28.md', '每日筆記/2024-04-15.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-25.md', '每日筆記/2024-05-06.md', '每日筆記/2023-09-24.md', '每日筆記/2024-05-18.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-21.md', '每日筆記/2024-04-22.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-27.md', '每日筆記/2024-04-17.md']
+每日筆記/2024-04-17
+['每日筆記/2023-10-16.md', '每日筆記/2024-04-07.md', '每日筆記/2024-04-15.md', '每日筆記/2024-04-09.md', '每日筆記/2024-04-15.md']
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-04-17.md', '每日筆記/2024-04-24.md', '每日筆記/2024-01-15.md', '每日筆記/2023-07-27.md']
+每日筆記/2024-04-21
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-25.md', '每日筆記/2024-04-21.md', '每日筆記/2024-04-23.md', '每日筆記/2024-04-26.md']
+mrr: 0.5722222222222222
+top1: 0.4722222222222222
+
+(server) E:\Research\extension\chrome-extension>[06:27:04]python -m modules.embedded
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 無法連線，因為目標電腦拒絕連線。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connection.py", line 400, in request
+    self.endheaders()
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 1041, in _send_output
+    self.send(msg)
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 979, in send
+    self.connect()
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000023FFCFC2810>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.147.19.2', port=8000): Max retries exceeded with url: /?model_id=intfloat%2Fmultilingual-e5-large (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023FFCFC2810>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 209, in <module>
+    embed = embedded(model_name="intfloat/multilingual-e5-large")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 22, in __init__
+    self.model_info = self.set_embedded_model(model_id=model_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 64, in set_embedded_model
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.147.19.2', port=8000): Max retries exceeded with url: /?model_id=intfloat%2Fmultilingual-e5-large (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023FFCFC2810>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。'))
+嵌入模型載入中...
+
+(server) E:\Research\extension\chrome-extension>[06:27:42]python -m modules.embedded
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 211, in <module>
+    embed.embedded_eval()
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 159, in embedded_eval
+    query_embeddings=self.embedded([query], prefix="query: "),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 41, in embedded
+    response_json = response.json()
+                    ^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+嵌入模型載入中...
+嵌入模型載入完成
+{'error': 'No query parameter provided'}
+資料庫已存在
+
+(server) E:\Research\extension\chrome-extension>[06:30:58]python -m modules.embedded
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 209, in <module>
+    embed = embedded(model_name="intfloat/multilingual-e5-large")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 22, in __init__
+    self.model_info = self.set_embedded_model(model_id=model_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Research\extension\chrome-extension\modules\embedded.py", line 64, in set_embedded_model
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\Anaconda3\envs\server\Lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+嵌入模型載入中...
+
+(server) E:\Research\extension\chrome-extension>[06:31:38]python -m modules.embedded
+嵌入模型載入中...
+嵌入模型載入完成
+{'max_length': 512, 'dim': 1024}
+資料庫已存在
+0.0053269505
+float32
+每日筆記/2023-07-24
+['每日筆記/2023-08-07.md', '每日筆記/2024-05-18.md', '每日筆記/2023-07-25.md', '每日筆記/2024-04-25.md', '每日筆記/2023-09-06.md']
+-0.0052084336
+float32
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-08-03.md', '每日筆記/2024-01-21.md', '每日筆記/2023-08-03.md', '每日筆記/2023-11-21.md']
+0.018536814
+float32
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-03-22.md', '每日筆記/2024-05-14.md', '每日筆記/2023-12-02.md', '每日筆記/2024-05-12.md']
+0.021125492
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2024-04-18.md', '每日筆記/2023-09-20.md', '每日筆記/2024-04-18.md']
+0.0060353754
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-12-21.md', '每日筆記/2023-11-27.md', '每日筆記/2024-04-18.md']
+0.016946748
+float32
+每日筆記/2023-08-30
+['每日筆記/2023-09-06.md', '每日筆記/2023-08-30.md', '每日筆記/2024-01-13.md', '每日筆記/2023-09-08.md', '每日筆記/2023-09-07.md']
+0.024035756
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-11.md', '每日筆記/2024-02-22.md', '每日筆記/2024-01-13.md', '每日筆記/2023-09-20.md', '每日筆記/2024-03-13.md']
+0.008504427
+float32
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-09-21.md', '每日筆記/2023-11-28.md', '每日筆記/2023-11-28.md', '每日筆記/2023-07-25.md']
+0.027077295
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-05.md', '每日筆記/2024-05-14.md']
+0.023591243
+float32
+每日筆記/2023-09-25
+['每日筆記/2023-09-25.md', '每日筆記/2024-05-10.md', '每日筆記/2023-09-24.md', '每日筆記/2023-09-14.md', '每日筆記/2023-11-02.md']
+0.012854187
+float32
+每日筆記/2023-10-02
+['每日筆記/2023-10-02.md', '每日筆記/2023-07-25.md', '每日筆記/2023-10-03.md', '每日筆記/2023-10-03.md', '每日筆記/2023-12-11.md']
+0.022961369
+float32
+每日筆記/2023-12-23
+['每日筆記/2024-04-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-16.md', '每日筆記/2024-05-12.md']
+0.013491121
+float32
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-08.md', '每日筆記/2023-12-15.md', '每日筆記/2023-10-12.md', '每日筆記/2024-05-03.md']
+0.009163801
+float32
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-11-09.md', '每日筆記/2023-09-07.md', '每日筆記/2023-12-08.md', '每日筆記/2023-09-20.md']
+0.006061628
+float32
+每日筆記/2024-03-13
+['每日筆記/2024-03-13.md', '每日筆記/2024-05-10.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-10.md', '每日筆記/2024-01-15.md']
+0.018171309
+float32
+每日筆記/2024-03-15
+['每日筆記/2024-02-22.md', '每日筆記/2024-03-15.md', '每日筆記/2024-03-22.md', '每日筆記/2024-01-13.md', '每日筆記/2024-04-16.md']
+0.025832241
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-16.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-20.md', '每日筆記/2023-09-22.md']
+0.019381
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-10-26.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-28.md', '每日筆記/2023-11-22.md', '每日筆記/2023-09-22.md']
+0.017131591
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-05.md', '每日筆記/2024-04-16.md', '每日筆記/2024-04-15.md']
+0.01971967
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-05.md']
+0.0168326
+float32
+每日筆記/2023-09-30
+['每日筆記/2024-03-21.md', '每日筆記/2023-11-28.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-30.md', '每日筆記/2023-12-24.md']
+0.012343728
+float32
+每日筆記/2023-11-15
+['每日筆記/2023-11-15.md', '每日筆記/2024-01-15.md', '每日筆記/2023-09-05.md', '每日筆記/2023-11-15.md', '每日筆記/2023-09-28.md']
+0.018580168
+float32
+每日筆記/2023-11-23
+['每日筆記/2023-10-16.md', '每日筆記/2024-01-15.md', '每日筆記/2024-05-09.md', '每日筆記/2024-02-23.md', '每日筆記/2023-10-12.md']
+0.004306196
+float32
+每日筆記/2023-12-04
+['每日筆記/2024-03-21.md', '每日筆記/2024-05-08.md', '每日筆記/2023-12-01.md', '每日筆記/2024-04-21.md', '每日筆記/2024-04-23.md']
+0.0072732363
+float32
+每日筆記/2023-12-08
+['每日筆記/2023-12-08.md', '每日筆記/2023-12-23.md', '每日筆記/2023-09-20.md', '每日筆記/2024-05-03.md', '每日筆記/2023-12-15.md']
+0.030489549
+float32
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2024-03-13.md', '每日筆記/2023-12-24.md']
+0.024414705
+float32
+每日筆記/2023-12-24
+['每日筆記/2023-12-24.md', '每日筆記/2024-04-16.md', '每日筆記/2024-04-15.md', '每日筆記/2024-04-11.md', '每日筆記/2023-12-22.md']
+0.008910919
+float32
+每日筆記/2024-03-16
+['每日筆記/2024-03-13.md', '每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-05-16.md', '每日筆記/2024-04-16.md']
+0.02197603
+float32
+每日筆記/2024-04-10
+['每日筆記/2024-04-10.md', '每日筆記/2024-05-12.md', '每日筆記/2024-03-13.md', '每日筆記/2023-11-28.md', '每日筆記/2024-03-23.md']
+-0.0046601593
+float32
+每日筆記/2024-04-11
+['每日筆記/2024-01-15.md', '每日筆記/2024-03-15.md', '每日筆記/2023-11-27.md', '每日筆記/2024-03-28.md', '每日筆記/2023-11-23.md']
+0.018192438
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-03-22.md', '每日筆記/2024-04-10.md', '每日筆記/2024-04-16.md', '每日筆記/2024-04-15.md', '每日筆記/2024-04-07.md']
+0.018622352
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-27.md', '每日筆記/2024-04-11.md', '每日筆記/2024-03-21.md', '每日筆記/2024-05-18.md']
+0.021762755
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-21.md', '每日筆記/2024-04-22.md', '每日筆記/2024-04-27.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-27.md']
+0.006245238
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-03-28.md', '每日筆記/2024-01-11.md', '每日筆記/2024-04-15.md', '每日筆記/2024-04-09.md']
+-0.0007915363
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-04-17.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-20.md']
+0.010252315
+float32
+每日筆記/2024-04-21
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-25.md', '每日筆記/2024-04-23.md', '每日筆記/2024-04-21.md', '每日筆記/2024-03-21.md']
+mrr: 0.5902777777777778
+top1: 0.5
+
+(server) E:\Research\extension\chrome-extension>[06:33:51]python -m modules.embedded
+嵌入模型載入中...
+嵌入模型載入完成
+{'max_length': 512, 'dim': 1024}
+資料庫已存在
+0.46956733
+float32
+每日筆記/2023-07-24
+['每日筆記/2023-08-30.md', '每日筆記/2024-05-18.md', '每日筆記/2024-05-20.md', '每日筆記/2024-03-22.md', '每日筆記/2023-07-24.md']
+0.10371837
+float32
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2024-01-21.md', '每日筆記/2023-10-03.md', '每日筆記/2023-11-21.md', '每日筆記/2024-05-18.md']
+1.6080601
+float32
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2023-12-02.md', '每日筆記/2023-09-28.md', '每日筆記/2024-03-22.md', '每日筆記/2024-05-12.md']
+0.6897052
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-09-20.md', '每日筆記/2023-09-19.md', '每日筆記/2023-11-22.md']
+0.69065803
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-09-19.md', '每日筆記/2023-08-14.md', '每日筆記/2024-05-10.md', '每日筆記/2024-05-04.md']
+0.69508916
+float32
+每日筆記/2023-08-30
+['每日筆記/2024-03-22.md', '每日筆記/2024-05-18.md', '每日筆記/2023-12-02.md', '每日筆記/2023-09-25.md', '每日筆記/2024-05-20.md']
+-0.25745422
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2024-03-16.md', '每日筆記/2024-05-14.md', '每日筆記/2023-09-20.md', '每日筆記/2024-05-10.md']
+-0.1365306
+float32
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-12-02.md', '每日筆記/2023-09-21.md', '每日筆記/2023-12-22.md', '每日筆記/2023-11-28.md']
+-0.5681945
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-29.md']
+1.192176
+float32
+每日筆記/2023-09-25
+['每日筆記/2024-01-14.md', '每日筆記/2024-05-03.md', '每日筆記/2024-05-10.md', '每日筆記/2023-10-02.md', '每日筆記/2023-09-11.md']
+1.1246095
+float32
+每日筆記/2023-10-02
+['每日筆記/2023-10-02.md', '每日筆記/2024-05-01.md', '每日筆記/2024-05-03.md', '每日筆記/2023-10-03.md', '每日筆記/2023-11-27.md']
+0.4810978
+float32
+每日筆記/2023-12-23
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-25.md', '每日筆記/2023-12-23.md', '每日筆記/2024-04-20.md', '每日筆記/2023-12-26.md']
+1.2146692
+float32
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-15.md', '每日筆記/2023-12-21.md', '每日筆記/2023-11-09.md', '每日筆記/2023-12-13.md']
+0.3975832
+float32
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-09-20.md', '每日筆記/2024-05-02.md', '每日筆記/2023-12-23.md', '每日筆記/2023-12-25.md']
+-0.72059643
+float32
+每日筆記/2024-03-13
+['每日筆記/2024-04-22.md', '每日筆記/2024-05-10.md', '每日筆記/2023-07-27.md', '每日筆記/2023-12-22.md', '每日筆記/2024-05-10.md']
+-0.23783581
+float32
+每日筆記/2024-03-15
+['每日筆記/2024-01-13.md', '每日筆記/2024-03-22.md', '每日筆記/2024-05-22.md', '每日筆記/2024-05-18.md', '每日筆記/2024-04-16.md']
+0.7201191
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-22.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md']
+-0.019395532
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-10-12.md', '每日筆記/2023-09-05.md']
+0.32136565
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-12-28.md', '每日筆記/2023-09-06.md', '每日筆記/2024-05-14.md', '每日筆記/2023-09-05.md']
+-0.47075862
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-29.md']
+1.1288266
+float32
+每日筆記/2023-09-30
+['每日筆記/2023-09-30.md', '每日筆記/2023-12-25.md', '每日筆記/2023-09-11.md', '每日筆記/2023-12-11.md', '每日筆記/2024-04-16.md']
+-0.43682376
+float32
+每日筆記/2023-11-15
+['每日筆記/2023-11-15.md', '每日筆記/2024-04-07.md', '每日筆記/2023-10-02.md', '每日筆記/2024-04-22.md', '每日筆記/2024-01-13.md']
+0.3903016
+float32
+每日筆記/2023-11-23
+['每日筆記/2024-01-15.md', '每日筆記/2023-10-20.md', '每日筆記/2024-01-10.md', '每日筆記/2023-10-31.md', '每日筆記/2023-11-23.md']
+0.01343402
+float32
+每日筆記/2023-12-04
+['每日筆記/2023-12-04.md', '每日筆記/2024-05-14.md', '每日筆記/2023-12-01.md', '每日筆記/2024-03-21.md', '每日筆記/2023-10-02.md']
+1.4073498
+float32
+每日筆記/2023-12-08
+['每日筆記/2023-12-23.md', '每日筆記/2023-12-28.md', '每日筆記/2023-09-20.md', '每日筆記/2024-05-14.md', '每日筆記/2024-05-06.md']
+0.1887727
+float32
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2024-03-13.md', '每日筆記/2023-12-22.md', '每日筆記/2023-10-04.md']
+0.66055185
+float32
+每日筆記/2023-12-24
+['每日筆記/2024-04-16.md', '每日筆記/2023-12-24.md', '每日筆記/2023-09-30.md', '每日筆記/2024-03-16.md', '每日筆記/2023-12-25.md']
+-0.34979212
+float32
+每日筆記/2024-03-16
+['每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-22.md', '每日筆記/2024-04-16.md']
+1.4948344
+float32
+每日筆記/2024-04-10
+['每日筆記/2024-04-10.md', '每日筆記/2023-12-02.md', '每日筆記/2024-05-18.md', '每日筆記/2024-04-17.md', '每日筆記/2024-05-12.md']
+0.9783548
+float32
+每日筆記/2024-04-11
+['每日筆記/2024-04-11.md', '每日筆記/2024-04-10.md', '每日筆記/2023-11-23.md', '每日筆記/2024-03-28.md', '每日筆記/2024-03-13.md']
+1.120429
+float32
+每日筆記/2024-04-17
+['每日筆記/2023-10-03.md', '每日筆記/2023-09-26.md', '每日筆記/2023-12-02.md', '每日筆記/2023-11-27.md', '每日筆記/2023-09-12.md']
+0.16913135
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2023-09-21.md', '每日筆記/2024-05-18.md', '每日筆記/2023-09-24.md', '每日筆記/2023-09-24.md']
+0.5418884
+float32
+每日筆記/2024-04-17
+['每日筆記/2023-11-29.md', '每日筆記/2023-09-24.md', '每日筆記/2023-09-21.md', '每日筆記/2024-04-22.md', '每日筆記/2024-05-14.md']
+1.3285317
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-01-11.md', '每日筆記/2023-12-24.md', '每日筆記/2024-03-28.md', '每日筆記/2023-12-23.md']
+-0.57868314
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-10.md', '每日筆記/2023-09-22.md', '每日筆記/2024-04-07.md', '每日筆記/2024-04-22.md', '每日筆記/2024-04-17.md']
+0.3227695
+float32
+每日筆記/2024-04-21
+['每日筆記/2024-04-23.md', '每日筆記/2024-04-27.md', '每日筆記/2024-04-21.md', '每日筆記/2024-04-25.md', '每日筆記/2024-05-18.md']
+mrr: 0.5583333333333332
+top1: 0.5
+
+(server) E:\Research\extension\chrome-extension>[06:35:15]python -m modules.embedded
+嵌入模型載入中...
+嵌入模型載入完成
+{'max_length': 512, 'dim': 1792}
+資料庫已存在
+-0.62025636
+float32
+每日筆記/2023-07-24
+['每日筆記/2023-07-25.md', '每日筆記/2023-08-07.md', '每日筆記/2023-10-06.md', '每日筆記/2023-09-08.md', '每日筆記/2023-08-30.md']
+0.46657732
+float32
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-08-26.md', '每日筆記/2023-08-03.md', '每日筆記/2024-01-25.md', '每日筆記/2023-08-31.md']
+-0.116102345
+float32
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-03-22.md', '每日筆記/2023-12-02.md', '每日筆記/2023-09-28.md', '每日筆記/2024-05-03.md']
+-0.8801726
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-09-19.md', '每日筆記/2023-09-25.md', '每日筆記/2023-10-31.md']
+-0.5474197
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-09-12.md', '每日筆記/2023-09-19.md', '每日筆記/2023-10-31.md']
+-0.101182126
+float32
+每日筆記/2023-08-30
+['每日筆記/2023-09-06.md', '每日筆記/2023-10-06.md', '每日筆記/2023-09-08.md', '每日筆記/2023-08-30.md', '每日筆記/2024-03-21.md']
+-0.33823183
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-20.md', '每日筆記/2024-03-16.md', '每日筆記/2023-09-21.md', '每日筆記/2023-09-03.md']
+0.114312
+float32
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-09-21.md', '每日筆記/2023-12-06.md', '每日筆記/2023-07-25.md', '每日筆記/2023-12-28.md']
+-0.77194434
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md']
+-0.8487336
+float32
+每日筆記/2023-09-25
+['每日筆記/2023-10-26.md', '每日筆記/2023-11-02.md', '每日筆記/2024-01-14.md', '每日筆記/2024-05-10.md', '每日筆記/2023-10-31.md']
+0.19549356
+float32
+每日筆記/2023-10-02
+['每日筆記/2023-10-02.md', '每日筆記/2024-04-10.md', '每日筆記/2023-12-11.md', '每日筆記/2023-10-03.md', '每日筆記/2024-05-03.md']
+0.4025579
+float32
+每日筆記/2023-12-23
+['每日筆記/2024-05-09.md', '每日筆記/2024-04-07.md', '每日筆記/2023-08-07.md', '每日筆記/2024-04-18.md', '每日筆記/2023-12-23.md']
+-0.4504912
+float32
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-13.md', '每日筆記/2024-02-22.md', '每日筆記/2024-03-01.md', '每日筆記/2023-12-23.md']
+0.5059204
+float32
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-12-08.md', '每日筆記/2023-09-07.md', '每日筆記/2023-12-23.md', '每日筆記/2023-12-25.md']
+0.25762326
+float32
+每日筆記/2024-03-13
+['每日筆記/2024-03-13.md', '每日筆記/2024-05-10.md', '每日筆記/2023-09-20.md', '每日筆記/2024-05-10.md', '每日筆記/2024-05-11.md']
+0.31832287
+float32
+每日筆記/2024-03-15
+['每日筆記/2024-01-13.md', '每日筆記/2024-02-22.md', '每日筆記/2024-01-14.md', '每日筆記/2024-01-13.md', '每日筆記/2024-03-22.md']
+-0.7840301
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-10-26.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-22.md']
+-0.51042527
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-22.md']
+-0.026362948
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-06.md', '每日筆記/2023-12-28.md', '每日筆記/2024-03-22.md']
+-0.49022678
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-05.md']
+0.3139449
+float32
+每日筆記/2023-09-30
+['每日筆記/2023-09-30.md', '每日筆記/2024-02-09.md', '每日筆記/2023-12-24.md', '每日筆記/2024-01-25.md', '每日筆記/2023-09-08.md']
+-0.36208707
+float32
+每日筆記/2023-11-15
+['每日筆記/2024-01-15.md', '每日筆記/2024-04-24.md', '每日筆記/2024-04-28.md', '每日筆記/2023-10-02.md', '每日筆記/2024-04-16.md']
+0.9125691
+float32
+每日筆記/2023-11-23
+['每日筆記/2023-11-23.md', '每日筆記/2023-10-16.md', '每日筆記/2024-01-30.md', '每日筆記/2023-08-26.md', '每日筆記/2023-08-31.md']
+-0.16199474
+float32
+每日筆記/2023-12-04
+['每日筆記/2023-12-04.md', '每日筆記/2024-01-14.md', '每日筆記/2024-01-17.md', '每日筆記/2024-05-01.md', '每日筆記/2023-12-02.md']
+-0.4060265
+float32
+每日筆記/2023-12-08
+['每日筆記/2023-12-15.md', '每日筆記/2024-05-14.md', '每日筆記/2023-12-08.md', '每日筆記/2024-04-17.md', '每日筆記/2023-11-09.md']
+-1.0885949
+float32
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2024-03-13.md', '每日筆記/2023-12-22.md', '每日筆記/2024-02-09.md', '每日筆記/2024-05-01.md']
+-0.27009192
+float32
+每日筆記/2023-12-24
+['每日筆記/2023-12-24.md', '每日筆記/2023-12-24.md', '每日筆記/2023-12-25.md', '每日筆記/2023-09-03.md', '每日筆記/2024-04-15.md']
+-0.5676055
+float32
+每日筆記/2024-03-16
+['每日筆記/2024-03-16.md', '每日筆記/2024-04-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-05-09.md', '每日筆記/2024-05-20.md']
+0.56105
+float32
+每日筆記/2024-04-10
+['每日筆記/2024-04-10.md', '每日筆記/2024-04-10.md', '每日筆記/2024-04-15.md', '每日筆記/2024-04-11.md', '每日筆記/2024-04-09.md']
+-0.0999073
+float32
+每日筆記/2024-04-11
+['每日筆記/2024-04-11.md', '每日筆記/2024-05-10.md', '每日筆記/2023-10-16.md', '每日筆記/2024-05-04.md', '每日筆記/2024-04-07.md']
+0.41005835
+float32
+每日筆記/2024-04-17
+['每日筆記/2023-11-28.md', '每日筆記/2024-01-25.md', '每日筆記/2024-01-17.md', '每日筆記/2023-10-12.md', '每日筆記/2023-07-25.md']
+0.83039707
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2024-05-18.md', '每日筆記/2024-05-06.md', '每日筆記/2024-03-21.md', '每日筆記/2023-09-24.md']
+0.6677197
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-21.md', '每日筆記/2024-04-27.md', '每日筆記/2024-04-22.md', '每日筆記/2024-05-18.md', '每日筆記/2024-03-21.md']
+0.23130177
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-18.md', '每日筆記/2024-04-07.md', '每日筆記/2023-10-16.md', '每日筆記/2024-04-22.md', '每日筆記/2024-04-23.md']
+0.6300122
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-25.md', '每日筆記/2024-03-21.md', '每日筆記/2023-12-13.md', '每日筆記/2023-09-11.md', '每日筆記/2024-01-30.md']
+0.98577243
+float32
+每日筆記/2024-04-21
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-21.md', '每日筆記/2024-04-25.md', '每日筆記/2023-09-21.md', '每日筆記/2024-04-23.md']
+mrr: 0.6050925925925925
+top1: 0.5555555555555556
+
+(server) E:\Research\extension\chrome-extension>[06:36:34]python -m modules.embedded
+嵌入模型載入中...
+嵌入模型載入完成
+{'max_length': 512, 'dim': 4096}
+資料庫已存在
+0.03604612
+float32
+每日筆記/2023-07-24
+['每日筆記/2023-07-24.md', '每日筆記/2023-10-06.md', '每日筆記/2023-08-07.md', '每日筆記/2023-09-06.md', '每日筆記/2023-07-25.md']
+-0.057200395
+float32
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-07-28.md', '每日筆記/2023-10-23.md', '每日筆記/2024-05-18.md', '每日筆記/2024-01-21.md']
+-0.2588572
+float32
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-03-22.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-20.md', '每日筆記/2024-05-13.md']
+-0.1619676
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2024-01-11.md', '每日筆記/2024-03-22.md', '每日筆記/2023-09-19.md']
+-0.32915065
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2024-03-22.md', '每日筆記/2023-11-15.md', '每日筆記/2023-12-21.md']
+-0.1116085
+float32
+每日筆記/2023-08-30
+['每日筆記/2023-09-06.md', '每日筆記/2023-08-30.md', '每日筆記/2023-09-08.md', '每日筆記/2024-04-09.md', '每日筆記/2024-04-07.md']
+-0.11549372
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-20.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-16.md', '每日筆記/2024-04-17.md']
+-0.35214102
+float32
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-09-21.md', '每日筆記/2023-11-28.md', '每日筆記/2023-12-28.md', '每日筆記/2023-11-13.md']
+0.1906288
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-19.md']
+0.16114116
+float32
+每日筆記/2023-09-25
+['每日筆記/2024-05-10.md', '每日筆記/2023-11-02.md', '每日筆記/2023-09-25.md', '每日筆記/2024-01-14.md', '每日筆記/2023-10-31.md']
+-0.106168725
+float32
+每日筆記/2023-10-02
+['每日筆記/2023-10-03.md', '每日筆記/2024-04-24.md', '每日筆記/2023-10-03.md', '每日筆記/2024-05-03.md', '每日筆記/2023-10-02.md']
+0.2692792
+float32
+每日筆記/2023-12-23
+['每日筆記/2023-12-25.md', '每日筆記/2024-04-11.md', '每日筆記/2024-04-16.md', '每日筆記/2024-04-15.md', '每日筆記/2023-12-22.md']
+0.008740316
+float32
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-15.md', '每日筆記/2023-12-21.md', '每日筆記/2023-12-08.md', '每日筆記/2023-12-13.md']
+0.19715488
+float32
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2024-05-04.md', '每日筆記/2023-12-25.md', '每日筆記/2024-03-16.md', '每日筆記/2023-09-07.md']
+-0.109264515
+float32
+每日筆記/2024-03-13
+['每日筆記/2024-03-13.md', '每日筆記/2024-05-10.md', '每日筆記/2023-12-04.md', '每日筆記/2024-05-11.md', '每日筆記/2024-04-07.md']
+-0.20829745
+float32
+每日筆記/2024-03-15
+['每日筆記/2024-03-22.md', '每日筆記/2024-04-16.md', '每日筆記/2024-03-15.md', '每日筆記/2024-03-22.md', '每日筆記/2024-04-07.md']
+0.090603866
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-16.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-14.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-16.md']
+0.16820273
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-19.md', '每日筆記/2023-09-16.md', '每日筆記/2023-09-20.md', '每日筆記/2023-09-14.md']
+0.071613215
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-11.md', '每日筆記/2023-12-28.md', '每日筆記/2024-04-16.md', '每日筆記/2024-05-08.md']
+0.2258542
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-19.md']
+-0.26710048
+float32
+每日筆記/2023-09-30
+['每日筆記/2023-09-30.md', '每日筆記/2023-07-27.md', '每日筆記/2023-09-04.md', '每日筆記/2024-04-16.md', '每日筆記/2023-09-25.md']
+-0.3263341
+float32
+每日筆記/2023-11-15
+['每日筆記/2023-11-15.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-16.md', '每日筆記/2024-04-24.md', '每日筆記/2024-04-07.md']
+-0.4384315
+float32
+每日筆記/2023-11-23
+['每日筆記/2023-11-23.md', '每日筆記/2024-01-10.md', '每日筆記/2023-09-03.md', '每日筆記/2023-10-18.md', '每日筆記/2024-01-15.md']
+-0.44338506
+float32
+每日筆記/2023-12-04
+['每日筆記/2023-12-04.md', '每日筆記/2024-04-20.md', '每日筆記/2024-01-13.md', '每日筆記/2023-10-04.md', '每日筆記/2024-01-13.md']
+-0.1314348
+float32
+每日筆記/2023-12-08
+['每日筆記/2023-12-08.md', '每日筆記/2023-09-20.md', '每日筆記/2023-12-25.md', '每日筆記/2024-05-03.md', '每日筆記/2024-05-11.md']
+0.062017523
+float32
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2024-03-13.md', '每日筆記/2023-09-04.md', '每日筆記/2023-12-22.md', '每日筆記/2024-02-09.md']
+-0.2724631
+float32
+每日筆記/2023-12-24
+['每日筆記/2024-04-16.md', '每日筆記/2023-12-25.md', '每日筆記/2023-09-04.md', '每日筆記/2023-12-25.md', '每日筆記/2024-04-09.md']
+0.14854458
+float32
+每日筆記/2024-03-16
+['每日筆記/2024-03-16.md', '每日筆記/2024-05-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-05-20.md', '每日筆記/2023-11-02.md']
+-0.28215396
+float32
+每日筆記/2024-04-10
+['每日筆記/2024-04-10.md', '每日筆記/2024-04-10.md', '每日筆記/2024-01-13.md', '每日筆記/2024-01-13.md', '每日筆記/2024-05-18.md']
+0.04661884
+float32
+每日筆記/2024-04-11
+['每日筆記/2024-04-11.md', '每日筆記/2024-04-10.md', '每日筆記/2024-04-16.md', '每日筆記/2023-12-25.md', '每日筆記/2024-04-24.md']
+0.06321003
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-18.md', '每日筆記/2024-04-09.md', '每日筆記/2024-04-18.md', '每日筆記/2024-04-07.md', '每日筆記/2024-04-11.md']
+-0.2960534
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2023-09-24.md', '每日筆記/2024-03-21.md', '每日筆記/2024-05-06.md', '每日筆記/2024-04-24.md']
+-0.0678077
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-21.md', '每日筆記/2024-04-22.md', '每日筆記/2024-05-14.md', '每日筆記/2024-04-18.md', '每日筆記/2024-04-21.md']
+-0.10619263
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-04-18.md', '每日筆記/2023-10-16.md', '每日筆記/2024-04-23.md', '每日筆記/2024-04-21.md']
+-0.12266735
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-17.md', '每日筆記/2024-04-20.md', '每日筆記/2024-05-10.md', '每日筆記/2024-04-20.md', '每日筆記/2024-05-18.md']
+0.056782953
+float32
+每日筆記/2024-04-21
+['每日筆記/2024-04-21.md', '每日筆記/2024-04-27.md', '每日筆記/2024-04-25.md', '每日筆記/2024-04-23.md', '每日筆記/2024-05-11.md']
+mrr: 0.7277777777777777
+top1: 0.6666666666666666
+
+(server) E:\Research\extension\chrome-extension>[06:38:46]python -m modules.embedded
+嵌入模型載入中...
+嵌入模型載入完成
+{'max_length': 8192, 'dim': 768}
+資料庫已存在
+-0.0248114
+float32
+每日筆記/2023-07-24
+['每日筆記/2023-11-09.md', '每日筆記/2023-09-08.md', '每日筆記/2023-08-07.md', '每日筆記/2024-04-24.md', '每日筆記/2023-07-24.md']
+0.1093909
+float32
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-10-18.md', '每日筆記/2023-08-03.md', '每日筆記/2023-08-03.md', '每日筆記/2023-10-23.md']
+0.08226326
+float32
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-13.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-20.md']
+-0.033329684
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-11-22.md', '每日筆記/2023-09-19.md', '每日筆記/2024-04-16.md']
+-0.14862308
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2024-01-11.md', '每日筆記/2024-03-22.md', '每日筆記/2023-09-19.md']
+-0.09564643
+float32
+每日筆記/2023-08-30
+['每日筆記/2023-09-08.md', '每日筆記/2023-11-09.md', '每日筆記/2023-09-28.md', '每日筆記/2023-08-20.md', '每日筆記/2024-03-22.md']
+0.020958384
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-20.md', '每日筆記/2024-03-22.md', '每日筆記/2024-04-17.md', '每日筆記/2023-09-24.md']
+0.056988083
+float32
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-10-20.md', '每日筆記/2023-11-28.md', '每日筆記/2024-05-18.md', '每日筆記/2024-04-29.md']
+0.037154675
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-13.md']
+-0.22031625
+float32
+每日筆記/2023-09-25
+['每日筆記/2023-09-24.md', '每日筆記/2023-09-25.md', '每日筆記/2023-10-05.md', '每日筆記/2024-01-30.md', '每日筆記/2024-02-09.md']
+0.021178192
+float32
+每日筆記/2023-10-02
+['每日筆記/2024-04-20.md', '每日筆記/2023-12-15.md', '每日筆記/2023-10-03.md', '每日筆記/2023-09-21.md', '每日筆記/2023-10-02.md']
+-0.103413075
+float32
+每日筆記/2023-12-23
+['每日筆記/2024-04-07.md', '每日筆記/2024-03-22.md', '每日筆記/2023-12-22.md', '每日筆記/2024-01-21.md', '每日筆記/2024-04-11.md']
+0.09217969
+float32
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-13.md', '每日筆記/2024-04-17.md', '每日筆記/2023-12-21.md', '每日筆記/2024-05-11.md']
+0.07203725
+float32
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-09-07.md', '每日筆記/2023-12-08.md', '每日筆記/2023-11-09.md', '每日筆記/2023-12-23.md']
+-0.099638276
+float32
+每日筆記/2024-03-13
+['每日筆記/2024-05-11.md', '每日筆記/2023-12-22.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-01.md']
+0.12842378
+float32
+每日筆記/2024-03-15
+['每日筆記/2024-03-28.md', '每日筆記/2024-03-15.md', '每日筆記/2024-02-22.md', '每日筆記/2024-03-22.md', '每日筆記/2024-03-23.md']
+-0.16972621
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-16.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-13.md']
+-0.06505945
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-10-13.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md']
+-0.0029400832
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-12-28.md', '每日筆記/2023-11-09.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-07.md']
+0.051653624
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-05.md']
+-0.1982517
+float32
+每日筆記/2023-09-30
+['每日筆記/2023-09-30.md', '每日筆記/2024-05-14.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-08.md', '每日筆記/2024-04-26.md']
+-0.062004115
+float32
+每日筆記/2023-11-15
+['每日筆記/2023-11-15.md', '每日筆記/2023-11-28.md', '每日筆記/2024-03-28.md', '每日筆記/2023-11-21.md', '每日筆記/2024-05-18.md']
+-0.06618143
+float32
+每日筆記/2023-11-23
+['每日筆記/2023-11-23.md', '每日筆記/2024-05-09.md', '每日筆記/2023-10-16.md', '每日筆記/2023-10-13.md', '每日筆記/2024-01-10.md']
+-0.15264247
+float32
+每日筆記/2023-12-04
+['每日筆記/2023-12-04.md', '每日筆記/2023-10-04.md', '每日筆記/2023-08-14.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-29.md']
+0.115974426
+float32
+每日筆記/2023-12-08
+['每日筆記/2023-12-08.md', '每日筆記/2023-12-15.md', '每日筆記/2024-04-20.md', '每日筆記/2023-09-16.md', '每日筆記/2023-12-13.md']
+-0.058793683
+float32
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2023-12-24.md', '每日筆記/2024-02-09.md']
+-0.024228748
+float32
+每日筆記/2023-12-24
+['每日筆記/2023-12-25.md', '每日筆記/2024-05-20.md', '每日筆記/2023-12-22.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-25.md']
+0.0012611985
+float32
+每日筆記/2024-03-16
+['每日筆記/2024-03-16.md', '每日筆記/2024-04-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-17.md', '每日筆記/2024-03-13.md']
+0.019605929
+float32
+每日筆記/2024-04-10
+['每日筆記/2024-04-20.md', '每日筆記/2024-04-28.md', '每日筆記/2024-03-12.md', '每日筆記/2024-05-18.md', '每日筆記/2024-04-22.md']
+-0.05863034
+float32
+每日筆記/2024-04-11
+['每日筆記/2024-04-11.md', '每日筆記/2024-05-18.md', '每日筆記/2023-11-27.md', '每日筆記/2024-01-15.md', '每日筆記/2024-01-21.md']
+-0.0016712844
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-18.md', '每日筆記/2024-04-17.md', '每日筆記/2024-05-14.md', '每日筆記/2023-10-19.md', '每日筆記/2023-08-14.md']
+0.021762645
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2024-05-14.md', '每日筆記/2023-08-14.md', '每日筆記/2024-01-13.md', '每日筆記/2024-04-10.md']
+-0.0640915
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-21.md', '每日筆記/2023-08-14.md', '每日筆記/2024-05-14.md', '每日筆記/2024-05-13.md', '每日筆記/2024-04-18.md']
+0.022807311
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2023-10-16.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-29.md', '每日筆記/2024-04-21.md']
+-0.153774
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-05-12.md', '每日筆記/2024-05-11.md', '每日筆記/2024-04-26.md', '每日筆記/2024-04-28.md', '每日筆記/2024-04-25.md']
+-0.041963756
+float32
+每日筆記/2024-04-21
+['每日筆記/2023-10-12.md', '每日筆記/2024-05-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-11-28.md', '每日筆記/2024-04-17.md']
+mrr: 0.5620370370370371
+top1: 0.5
+
+(server) E:\Research\extension\chrome-extension>[06:39:57]python -m modules.embedded
+嵌入模型載入中...
+嵌入模型載入完成
+{'max_length': 8192, 'dim': 1024}
+資料庫已存在
+-0.0025283813
+float32
+每日筆記/2023-07-24
+['每日筆記/2023-09-25.md', '每日筆記/2024-05-22.md', '每日筆記/2024-03-13.md', '每日筆記/2023-09-06.md', '每日筆記/2024-05-02.md']
+-0.015706317
+float32
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-08-03.md', '每日筆記/2023-08-03.md', '每日筆記/2023-10-23.md', '每日筆記/2023-10-18.md']
+-0.017930817
+float32
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-03-22.md', '每日筆記/2023-12-02.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-20.md']
+0.0030554347
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2024-05-20.md', '每日筆記/2024-02-09.md', '每日筆記/2024-04-20.md']
+0.004197809
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2024-03-22.md', '每日筆記/2024-05-22.md', '每日筆記/2024-04-16.md']
+-0.009601541
+float32
+每日筆記/2023-08-30
+['每日筆記/2023-09-06.md', '每日筆記/2023-09-07.md', '每日筆記/2023-08-30.md', '每日筆記/2023-12-25.md', '每日筆記/2023-08-20.md']
+-0.008946647
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-20.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-24.md', '每日筆記/2024-03-16.md']
+-0.0017573596
+float32
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-09-21.md', '每日筆記/2023-10-03.md', '每日筆記/2023-11-13.md', '每日筆記/2023-10-03.md']
+-0.00090106024
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-05.md', '每日筆記/2023-10-26.md', '每日筆記/2023-09-19.md']
+-0.010606428
+float32
+每日筆記/2023-09-25
+['每日筆記/2024-02-22.md', '每日筆記/2024-05-10.md', '每日筆記/2023-10-31.md', '每日筆記/2023-09-16.md', '每日筆記/2023-10-26.md']
+-0.021898879
+float32
+每日筆記/2023-10-02
+['每日筆記/2023-10-02.md', '每日筆記/2023-10-03.md', '每日筆記/2023-10-03.md', '每日筆記/2023-10-03.md', '每日筆記/2023-12-11.md']
+-0.012850381
+float32
+每日筆記/2023-12-23
+['每日筆記/2024-05-10.md', '每日筆記/2024-05-20.md', '每日筆記/2023-09-20.md', '每日筆記/2023-12-23.md', '每日筆記/2024-04-15.md']
+-0.008525199
+float32
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-21.md', '每日筆記/2024-05-06.md', '每日筆記/2023-12-15.md', '每日筆記/2024-03-13.md']
+-0.007932572
+float32
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-12-08.md', '每日筆記/2023-09-20.md', '每日筆記/2023-09-07.md', '每日筆記/2023-12-25.md']
+-0.059128642
+float32
+每日筆記/2024-03-13
+['每日筆記/2024-03-13.md', '每日筆記/2024-05-10.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-10.md', '每日筆記/2023-09-20.md']
+0.01818819
+float32
+每日筆記/2024-03-15
+['每日筆記/2023-12-14.md', '每日筆記/2024-02-22.md', '每日筆記/2024-03-22.md', '每日筆記/2024-01-13.md', '每日筆記/2024-04-16.md']
+-0.01111368
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-16.md', '每日筆記/2023-10-04.md', '每日筆記/2023-09-16.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-13.md']
+0.010007561
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-12-13.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-16.md', '每日筆記/2023-09-19.md']
+-0.020306036
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-12-28.md', '每日筆記/2023-09-06.md', '每日筆記/2024-05-20.md', '每日筆記/2023-09-20.md']
+0.016172567
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-10-13.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-28.md', '每日筆記/2023-12-13.md']
+-0.014738169
+float32
+每日筆記/2023-09-30
+['每日筆記/2023-09-30.md', '每日筆記/2024-05-04.md', '每日筆記/2023-12-02.md', '每日筆記/2024-03-12.md', '每日筆記/2024-03-13.md']
+-0.0033741978
+float32
+每日筆記/2023-11-15
+['每日筆記/2023-11-15.md', '每日筆記/2024-01-15.md', '每日筆記/2023-10-16.md', '每日筆記/2023-11-27.md', '每日筆記/2023-08-03.md']
+0.023882998
+float32
+每日筆記/2023-11-23
+['每日筆記/2023-11-23.md', '每日筆記/2024-01-10.md', '每日筆記/2024-01-15.md', '每日筆記/2023-10-18.md', '每日筆記/2023-10-27.md']
+-0.031223033
+float32
+每日筆記/2023-12-04
+['每日筆記/2023-12-01.md', '每日筆記/2024-05-01.md', '每日筆記/2024-04-26.md', '每日筆記/2023-09-05.md', '每日筆記/2024-05-03.md']
+0.025231972
+float32
+每日筆記/2023-12-08
+['每日筆記/2023-12-08.md', '每日筆記/2023-12-25.md', '每日筆記/2023-12-23.md', '每日筆記/2023-09-20.md', '每日筆記/2024-05-03.md']
+0.014814591
+float32
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2023-10-04.md', '每日筆記/2024-05-16.md', '每日筆記/2023-12-22.md']
+0.019129394
+float32
+每日筆記/2023-12-24
+['每日筆記/2023-12-24.md', '每日筆記/2023-12-25.md', '每日筆記/2023-12-24.md', '每日筆記/2023-12-25.md', '每日筆記/2024-05-20.md']
+-0.019366723
+float32
+每日筆記/2024-03-16
+['每日筆記/2024-03-13.md', '每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-05-16.md', '每日筆記/2024-03-16.md']
+-0.0038684777
+float32
+每日筆記/2024-04-10
+['每日筆記/2024-04-10.md', '每日筆記/2024-05-03.md', '每日筆記/2024-03-13.md', '每日筆記/2024-05-13.md', '每日筆記/2024-04-29.md']
+-0.023971418
+float32
+每日筆記/2024-04-11
+['每日筆記/2024-04-11.md', '每日筆記/2023-11-27.md', '每日筆記/2024-01-15.md', '每日筆記/2024-04-10.md', '每日筆記/2024-04-17.md']
+-0.009674878
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-03-23.md', '每日筆記/2024-04-07.md', '每日筆記/2024-04-09.md', '每日筆記/2024-04-15.md', '每日筆記/2024-04-16.md']
+0.039646655
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-27.md', '每日筆記/2023-09-24.md', '每日筆記/2024-05-18.md', '每日筆記/2024-03-21.md', '每日筆記/2024-01-13.md']
+0.008047289
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-22.md', '每日筆記/2024-04-24.md', '每日筆記/2024-04-23.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-21.md']
+0.018122913
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2023-10-16.md', '每日筆記/2024-04-15.md', '每日筆記/2024-04-11.md', '每日筆記/2024-03-13.md']
+-0.04976416
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-04-17.md', '每日筆記/2023-09-20.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-10.md']
+0.03454483
+float32
+每日筆記/2024-04-21
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-21.md', '每日筆記/2024-04-25.md', '每日筆記/2024-04-23.md', '每日筆記/2024-04-26.md']
+mrr: 0.662037037037037
+top1: 0.5833333333333334
+
+(server) E:\Research\extension\chrome-extension>[06:41:20]python -m modules.embedded
+嵌入模型載入中...
+嵌入模型載入完成
+{'max_length': 512, 'dim': 768}
+資料庫已存在
+0.0056778155
+float32
+每日筆記/2023-07-24
+['每日筆記/2024-03-22.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-25.md', '每日筆記/2024-03-13.md', '每日筆記/2023-08-30.md']
+0.008329201
+float32
+每日筆記/2023-08-03
+['每日筆記/2023-08-03.md', '每日筆記/2023-09-26.md', '每日筆記/2023-08-03.md', '每日筆記/2023-08-03.md', '每日筆記/2023-10-23.md']
+0.03132646
+float32
+每日筆記/2023-08-07
+['每日筆記/2023-08-07.md', '每日筆記/2024-04-20.md', '每日筆記/2023-12-02.md', '每日筆記/2024-04-20.md', '每日筆記/2024-04-20.md']
+0.011779566
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-08-14.md', '每日筆記/2023-11-22.md', '每日筆記/2023-09-19.md', '每日筆記/2024-05-06.md']
+-0.0025371711
+float32
+每日筆記/2023-08-14
+['每日筆記/2023-08-14.md', '每日筆記/2023-09-19.md', '每日筆記/2023-11-22.md', '每日筆記/2023-08-14.md', '每日筆記/2024-05-06.md']
+0.0041289167
+float32
+每日筆記/2023-08-30
+['每日筆記/2023-08-30.md', '每日筆記/2023-09-28.md', '每日筆記/2023-09-06.md', '每日筆記/2023-08-20.md', '每日筆記/2024-05-18.md']
+0.04020352
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2024-03-13.md', '每日筆記/2023-09-20.md', '每日筆記/2024-03-22.md', '每日筆記/2024-03-22.md']
+0.012000696
+float32
+每日筆記/2023-09-21
+['每日筆記/2023-12-21.md', '每日筆記/2023-09-21.md', '每日筆記/2023-12-02.md', '每日筆記/2023-12-28.md', '每日筆記/2023-12-22.md']
+0.037977256
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-11-22.md', '每日筆記/2024-02-22.md']
+0.034064416
+float32
+每日筆記/2023-09-25
+['每日筆記/2023-10-26.md', '每日筆記/2024-02-09.md', '每日筆記/2023-10-31.md', '每日筆記/2023-11-02.md', '每日筆記/2023-09-13.md']
+0.0019739494
+float32
+每日筆記/2023-10-02
+['每日筆記/2023-10-02.md', '每日筆記/2023-10-03.md', '每日筆記/2024-05-03.md', '每日筆記/2023-09-25.md', '每日筆記/2023-12-15.md']
+0.016104953
+float32
+每日筆記/2023-12-23
+['每日筆記/2023-08-07.md', '每日筆記/2024-04-11.md', '每日筆記/2024-04-15.md', '每日筆記/2024-03-23.md', '每日筆記/2024-05-03.md']
+0.02490282
+float32
+每日筆記/2023-12-25
+['每日筆記/2023-12-25.md', '每日筆記/2023-12-21.md', '每日筆記/2023-12-13.md', '每日筆記/2024-03-01.md', '每日筆記/2023-11-23.md']
+0.0011965559
+float32
+每日筆記/2023-12-28
+['每日筆記/2023-12-28.md', '每日筆記/2023-09-07.md', '每日筆記/2023-11-09.md', '每日筆記/2023-12-25.md', '每日筆記/2023-12-23.md']
+-0.008023825
+float32
+每日筆記/2024-03-13
+['每日筆記/2024-05-10.md', '每日筆記/2023-07-27.md', '每日筆記/2024-05-12.md', '每日筆記/2024-05-10.md', '每日筆記/2023-11-28.md']
+0.03800597
+float32
+每日筆記/2024-03-15
+['每日筆記/2024-03-13.md', '每日筆記/2024-02-22.md', '每日筆記/2024-03-22.md', '每日筆記/2024-03-15.md', '每日筆記/2024-03-22.md']
+0.0038017633
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-09-14.md', '每日筆記/2023-12-13.md', '每日筆記/2023-11-22.md', '每日筆記/2023-09-13.md', '每日筆記/2024-02-22.md']
+0.01924411
+float32
+每日筆記/2023-09-16
+['每日筆記/2023-11-22.md', '每日筆記/2023-12-13.md', '每日筆記/2023-09-22.md', '每日筆記/2023-09-19.md', '每日筆記/2023-09-16.md']
+0.027688684
+float32
+每日筆記/2023-09-20
+['每日筆記/2023-09-20.md', '每日筆記/2023-09-06.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-20.md', '每日筆記/2023-12-08.md']
+0.032709867
+float32
+每日筆記/2023-09-22
+['每日筆記/2023-09-22.md', '每日筆記/2023-11-22.md', '每日筆記/2023-09-28.md', '每日筆記/2023-10-26.md', '每日筆記/2023-12-13.md']
+0.006310753
+float32
+每日筆記/2023-09-30
+['每日筆記/2023-09-30.md', '每日筆記/2023-12-22.md', '每日筆記/2023-08-07.md', '每日筆記/2023-12-01.md', '每日筆記/2024-03-12.md']
+0.0336004
+float32
+每日筆記/2023-11-15
+['每日筆記/2024-04-28.md', '每日筆記/2023-10-18.md', '每日筆記/2024-04-24.md', '每日筆記/2024-04-07.md', '每日筆記/2023-08-14.md']
+0.018297803
+float32
+每日筆記/2023-11-23
+['每日筆記/2023-11-23.md', '每日筆記/2024-01-10.md', '每日筆記/2024-05-09.md', '每日筆記/2024-03-15.md', '每日筆記/2023-09-03.md']
+0.0010627303
+float32
+每日筆記/2023-12-04
+['每日筆記/2024-05-11.md', '每日筆記/2024-05-12.md', '每日筆記/2023-12-02.md', '每日筆記/2024-05-08.md', '每日筆記/2024-05-14.md']
+0.025334172
+float32
+每日筆記/2023-12-08
+['每日筆記/2023-09-20.md', '每日筆記/2023-11-09.md', '每日筆記/2024-03-13.md', '每日筆記/2023-12-13.md', '每日筆記/2024-04-17.md']
+0.015667237
+float32
+每日筆記/2023-12-22
+['每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2023-12-22.md', '每日筆記/2023-09-05.md', '每日筆記/2023-09-12.md']
+0.0037021753
+float32
+每日筆記/2023-12-24
+['每日筆記/2024-05-20.md', '每日筆記/2024-04-18.md', '每日筆記/2024-04-09.md', '每日筆記/2024-04-23.md', '每日筆記/2024-04-20.md']
+0.055285897
+float32
+每日筆記/2024-03-16
+['每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-03-16.md', '每日筆記/2024-04-07.md', '每日筆記/2023-09-20.md']
+-0.016058983
+float32
+每日筆記/2024-04-10
+['每日筆記/2024-04-10.md', '每日筆記/2024-04-10.md', '每日筆記/2024-04-28.md', '每日筆記/2023-12-02.md', '每日筆記/2024-05-03.md']
+-0.0006342579
+float32
+每日筆記/2024-04-11
+['每日筆記/2023-10-18.md', '每日筆記/2024-04-10.md', '每日筆記/2024-04-25.md', '每日筆記/2023-10-31.md', '每日筆記/2024-03-13.md']
+0.007956143
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-01-11.md', '每日筆記/2024-01-10.md', '每日筆記/2024-05-14.md', '每日筆記/2024-05-16.md', '每日筆記/2024-03-22.md']
+0.03447219
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-05-18.md', '每日筆記/2023-09-24.md', '每日筆記/2023-09-21.md', '每日筆記/2023-09-27.md', '每日筆記/2024-05-06.md']
+0.011143487
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-21.md', '每日筆記/2024-04-07.md', '每日筆記/2024-05-18.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-26.md']
+0.032661587
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-05-01.md', '每日筆記/2024-01-11.md', '每日筆記/2024-01-10.md', '每日筆記/2024-01-11.md', '每日筆記/2024-05-12.md']
+0.02346899
+float32
+每日筆記/2024-04-17
+['每日筆記/2024-04-07.md', '每日筆記/2024-05-10.md', '每日筆記/2024-05-12.md', '每日筆記/2024-04-20.md', '每日筆記/2024-05-12.md']
+0.021297194
+float32
+每日筆記/2024-04-21
+['每日筆記/2024-04-27.md', '每日筆記/2024-04-21.md', '每日筆記/2024-05-18.md', '每日筆記/2024-04-25.md', '每日筆記/2023-11-29.md']
+mrr: 0.5125
+top1: 0.4722222222222222
+
+(server) E:\Research\extension\chrome-extension>[06:53:46]python 

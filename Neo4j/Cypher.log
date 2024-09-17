@@ -1,0 +1,273 @@
+# 匯入大量文獻資料
+## 論文
+### Key statement
+CREATE CONSTRAINT `imp_uniq_論文_Title` IF NOT EXISTS
+FOR (n: `論文`)
+REQUIRE (n.`Title`) IS UNIQUE;
+
+### Load statement
+UNWIND $nodeRecords AS nodeRecord
+WITH *
+WHERE NOT nodeRecord.`Title` IN $idsToSkip AND NOT nodeRecord.`Title` IS NULL
+MERGE (n: `論文` { `Title`: nodeRecord.`Title` })
+SET n.`Abstract` = nodeRecord.`Abstract Note`;
+
+## 人物
+### Key statement
+CREATE CONSTRAINT `imp_uniq_人物_Author` IF NOT EXISTS
+FOR (n: `人物`)
+REQUIRE (n.`Author`) IS UNIQUE;
+### Load statement
+UNWIND $nodeRecords AS nodeRecord
+WITH *
+WHERE NOT nodeRecord.`Author` IN $idsToSkip AND NOT nodeRecord.`Author` IS NULL
+MERGE (n: `人物` { `Author`: nodeRecord.`Author` });
+
+## 標籤
+### Key statement
+CREATE CONSTRAINT `imp_uniq_標籤_Manual_Tags` IF NOT EXISTS
+FOR (n: `標籤`)
+REQUIRE (n.`Manual Tags`) IS UNIQUE;
+### Load statement
+UNWIND $nodeRecords AS nodeRecord
+WITH *
+WHERE NOT nodeRecord.`Manual Tags` IN $idsToSkip AND NOT nodeRecord.`Manual Tags` IS NULL
+MERGE (n: `標籤` { `Manual Tags`: nodeRecord.`Manual Tags` });
+
+## 年分
+### Key statement
+CREATE CONSTRAINT `imp_uniq_年分_Publication_Year` IF NOT EXISTS
+FOR (n: `年分`)
+REQUIRE (n.`Publication Year`) IS UNIQUE;
+### Load statement
+UNWIND $nodeRecords AS nodeRecord
+WITH *
+WHERE NOT nodeRecord.`Publication Year` IN $idsToSkip AND NOT toInteger(trim(nodeRecord.`Publication Year`)) IS NULL
+MERGE (n: `年分` { `Publication Year`: toInteger(trim(nodeRecord.`Publication Year`)) });
+
+## 有作者
+### Load statement
+UNWIND $relRecords AS relRecord
+MATCH (source: `論文` { `Title`: relRecord.`Title` })
+MATCH (target: `人物` { `Author`: relRecord.`Abstract` })
+MERGE (source)-[r: `有作者`]->(target);
+
+
+## 有著作
+### Load statement
+UNWIND $relRecords AS relRecord
+MATCH (source: `人物` { `Author`: relRecord.`Author` })
+MATCH (target: `論文` { `Title`: relRecord.`Title` })
+MERGE (source)-[r: `有著作`]->(target);
+
+## 有tag
+### Load statement
+UNWIND $relRecords AS relRecord
+MATCH (source: `論文` { `Title`: relRecord.`Title` })
+MATCH (target: `標籤` { `Manual Tags`: relRecord.`Manual Tags` })
+MERGE (source)-[r: `有tag`]->(target);
+
+## 發表年分
+### Load statement
+UNWIND $relRecords AS relRecord
+MATCH (source: `論文` { `Title`: relRecord.`Title` })
+MATCH (target: `年分` { `Publication Year`: toInteger(trim(relRecord.`Publication Year`)) })
+MERGE (source)-[r: `發表年分`]->(target);
+
+
+
+## 2023.11.27 大量匯入
+:param {
+  // Define the file path root and the individual file names required for loading.
+  // https://neo4j.com/docs/operations-manual/current/configuration/file-locations/
+  file_path_root: 'file:///', // Change this to the folder your script can access the files at.
+  file_0: 'My Library0.csv'
+};
+
+// CONSTRAINT creation
+// -------------------
+//
+// Create node uniqueness constraints, ensuring no duplicates for the given node label and ID property exist in the database. This also ensures no duplicates are introduced in future.
+//
+// NOTE: If your database version is below (not including) 4.4.0, please use the constraint creation syntax below:
+// CREATE CONSTRAINT `imp_uniq_人物string_Author` IF NOT EXISTS
+// ON (n: `人物string`)
+// ASSERT n.`Author` IS UNIQUE;
+// CREATE CONSTRAINT `imp_uniq_論文_Title` IF NOT EXISTS
+// ON (n: `論文`)
+// ASSERT n.`Title` IS UNIQUE;
+// CREATE CONSTRAINT `imp_uniq_年分_Publication_Year` IF NOT EXISTS
+// ON (n: `年分`)
+// ASSERT n.`Publication Year` IS UNIQUE;
+// CREATE CONSTRAINT `imp_uniq_期刊或會議_Publication_Title` IF NOT EXISTS
+// ON (n: `期刊或會議`)
+// ASSERT n.`Publication Title` IS UNIQUE;
+// CREATE CONSTRAINT `imp_uniq_Tag List_Manual_Tags` IF NOT EXISTS
+// ON (n: `Tag List`)
+// ASSERT n.`Manual Tags` IS UNIQUE;
+//
+// NOTE: The following constraint creation syntax is generated based on the current connected database version 5.14-aura.
+CREATE CONSTRAINT `imp_uniq_人物string_Author` IF NOT EXISTS
+FOR (n: `人物string`)
+REQUIRE (n.`Author`) IS UNIQUE;
+CREATE CONSTRAINT `imp_uniq_論文_Title` IF NOT EXISTS
+FOR (n: `論文`)
+REQUIRE (n.`Title`) IS UNIQUE;
+CREATE CONSTRAINT `imp_uniq_年分_Publication_Year` IF NOT EXISTS
+FOR (n: `年分`)
+REQUIRE (n.`Publication Year`) IS UNIQUE;
+CREATE CONSTRAINT `imp_uniq_期刊或會議_Publication_Title` IF NOT EXISTS
+FOR (n: `期刊或會議`)
+REQUIRE (n.`Publication Title`) IS UNIQUE;
+CREATE CONSTRAINT `imp_uniq_Tag List_Manual_Tags` IF NOT EXISTS
+FOR (n: `Tag List`)
+REQUIRE (n.`Manual Tags`) IS UNIQUE;
+
+:param {
+  idsToSkip: []
+};
+
+// NODE load
+// ---------
+//
+// Load nodes in batches, one node label at a time. Nodes will be created using a MERGE statement to ensure a node with the same label and ID property remains unique. Pre-existing nodes found by a MERGE statement will have their other properties set to the latest values encountered in a load file.
+//
+// NOTE: Any nodes with IDs in the 'idsToSkip' list parameter will not be loaded.
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row
+WHERE NOT row.`Author` IN $idsToSkip AND NOT row.`Author` IS NULL
+CALL {
+  WITH row
+  MERGE (n: `人物string` { `Author`: row.`Author` })
+  SET n.`Author` = row.`Author`
+} IN TRANSACTIONS OF 10000 ROWS;
+
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row
+WHERE NOT row.`Title` IN $idsToSkip AND NOT row.`Title` IS NULL
+CALL {
+  WITH row
+  MERGE (n: `論文` { `Title`: row.`Title` })
+  SET n.`Title` = row.`Title`
+  SET n.`DOI` = row.`DOI`
+} IN TRANSACTIONS OF 10000 ROWS;
+
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row
+WHERE NOT row.`Publication Year` IN $idsToSkip AND NOT toInteger(trim(row.`Publication Year`)) IS NULL
+CALL {
+  WITH row
+  MERGE (n: `年分` { `Publication Year`: toInteger(trim(row.`Publication Year`)) })
+  SET n.`Publication Year` = toInteger(trim(row.`Publication Year`))
+} IN TRANSACTIONS OF 10000 ROWS;
+
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row
+WHERE NOT row.`Publication Title` IN $idsToSkip AND NOT row.`Publication Title` IS NULL
+CALL {
+  WITH row
+  MERGE (n: `期刊或會議` { `Publication Title`: row.`Publication Title` })
+  SET n.`Publication Title` = row.`Publication Title`
+} IN TRANSACTIONS OF 10000 ROWS;
+
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row
+WHERE NOT row.`Manual Tags` IN $idsToSkip AND NOT row.`Manual Tags` IS NULL
+CALL {
+  WITH row
+  MERGE (n: `Tag List` { `Manual Tags`: row.`Manual Tags` })
+  SET n.`Manual Tags` = row.`Manual Tags`
+} IN TRANSACTIONS OF 10000 ROWS;
+
+
+// RELATIONSHIP load
+// -----------------
+//
+// Load relationships in batches, one relationship type at a time. Relationships are created using a MERGE statement, meaning only one relationship of a given type will ever be created between a pair of nodes.
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row 
+CALL {
+  WITH row
+  MATCH (source: `論文` { `Title`: row.`Title` })
+  MATCH (target: `人物string` { `Author`: row.`Author` })
+  MERGE (source)-[r: `有作者List`]->(target)
+} IN TRANSACTIONS OF 10000 ROWS;
+
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row 
+CALL {
+  WITH row
+  MATCH (source: `論文` { `Title`: row.`Title` })
+  MATCH (target: `年分` { `Publication Year`: toInteger(trim(row.`Publication Year`)) })
+  MERGE (source)-[r: `發表於`]->(target)
+} IN TRANSACTIONS OF 10000 ROWS;
+
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row 
+CALL {
+  WITH row
+  MATCH (source: `論文` { `Title`: row.`Title` })
+  MATCH (target: `期刊或會議` { `Publication Title`: row.`Publication Title` })
+  MERGE (source)-[r: `發表在`]->(target)
+} IN TRANSACTIONS OF 10000 ROWS;
+
+LOAD CSV WITH HEADERS FROM ($file_path_root + $file_0) AS row
+WITH row 
+CALL {
+  WITH row
+  MATCH (source: `論文` { `Title`: row.`Title` })
+  MATCH (target: `Tag List` { `Manual Tags`: row.`Manual Tags` })
+  MERGE (source)-[r: `有標籤List`]->(target)
+} IN TRANSACTIONS OF 10000 ROWS;
+
+
+## 切作者
+MATCH (str:`人物string`)
+WITH str, split(str.Author, ';') AS names
+UNWIND names AS N
+MERGE (X:`人物` {name: trim(N)})
+MERGE ((str) -[:`有子作者`]->(X))
+
+## 切標籤
+MATCH (tagList:`Tag List`)
+WITH tagList, split(tagList.`Manual Tags`, ';') AS tags
+UNWIND tags AS tag
+MERGE (X:`標籤` {name: trim(tag)})
+MERGE ((tagList) -[:`有子標籤`]->(X))
+
+## 改變標籤
+MATCH (n:`摘要`)
+REMOVE n:`摘要`
+SET n:`摘錄`
+RETURN n
+
+## 改變關係名稱
+參考https://stackoverflow.com/questions/13816712/how-do-i-rename-relationships-in-neo4j
+MATCH (n1)-[old:`有摘要`]->(n2)
+CREATE (n1)-[new:`有摘錄`]->(n2)
+DELETE old
+RETURN new
+
+## 查詢最新的三筆摘錄
+MATCH (n:`摘錄`)
+WHERE n.`建立時間` IS NOT NULL
+RETURN n
+ORDER BY n.`建立時間` DESC
+LIMIT 3
+
+## 刪除指定節點(id)
+MATCH(n:`摘錄`)
+WHERE elementID(n)=4499
+DETACH DELETE n
+
+## 根據CSV將KEY新增到對應的Title
+LOAD CSV FROM "http://localhost:11001/project-16ca77de-6055-4854-9b9e-8a16f80deda1/reference.csv" as csvLine
+MERGE (n:`論文`{`Title`:csvLine[4]})
+SET n.Key=csvLine[0]
+
+## 取得深度一的相關節點
+### 參考: https://neo4j.com/developer/kb/how-do-i-use-load-csv-to-update-set-properties-of-existing-nodes/
+MATCH(n:`摘錄`{`UUID`:'892b6102-110a-4e76-a574-4914c0270e7a'})
+MATCH(m)
+WHERE (m)-[]->(n) OR (n)-[]->(m)  
+RETURN n, m

@@ -1,0 +1,15 @@
+Active code page: 437
+Active code page: 437
+
+(base) E:\Research\extension\chrome-extension>chcp 65001
+Active code page: 65001
+
+(base) E:\Research\extension\chrome-extension>Active code page: 437
+Active code page: 437
+
+(base) E:\Research\extension\chrome-extension>chcp 65001
+Active code page: 65001
+
+(base) E:\Research\extension\chrome-extension>conda activate server
+
+(server) E:\Research\extension\chrome-extension>

@@ -1,0 +1,17 @@
+{
+  "name": "PKGextension",
+  "description": "使用http協定實現跨應用程式溝通。預設使用27711port，相關自定義功能將在未來開放。",
+  "version": "1.0",
+  "manifest_version": 3,
+  "minimum_chrome_version": "116",
+  "action": {
+    "default_icon": "icons/socket-inactive.png",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [ "<all_urls>" ],
+  "permissions": ["tabs", "input","activeTab", "contextMenus", "notifications", "storage", "webNavigation"],
+  "background": {
+    "service_worker": "service-worker_websocket.js",
+    "type": "module"
+  }
+}
