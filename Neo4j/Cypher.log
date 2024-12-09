@@ -271,3 +271,8 @@ MATCH(n:`摘錄`{`UUID`:'892b6102-110a-4e76-a574-4914c0270e7a'})
 MATCH(m)
 WHERE (m)-[]->(n) OR (n)-[]->(m)  
 RETURN n, m
+
+## 為該標籤的節點加上UUID
+match(n:`標籤`) UNWIND n as ns
+set ns.`UUID`=randomUUID()
+RETURn n

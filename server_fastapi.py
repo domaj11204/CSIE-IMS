@@ -4,7 +4,7 @@
 """
 from typing import Annotated
 
-from fastapi import FastAPI, Query, HTTPException, Response, status
+from fastapi import FastAPI, Query, HTTPException, Response, status, Body
 from fastapi.responses import JSONResponse
 from typing import Dict
 import subprocess
@@ -16,9 +16,9 @@ import time
 import threading
 import os
 import psutil
-from modules.MessageHandle import messageHandle, set_DB
 from excerpt import excerpt_data
 from modules.utils import read_config, call_api
+from modules.debug_utils import print_var
 config = read_config()
 # log文件設定
 import logging
@@ -138,19 +138,6 @@ def self_terminate():
 async def kill():
     threading.Thread(target=self_terminate, daemon=True).start()
     return {"success":True}
-
-@app.post("/upload_triple")
-def test_triple(triple: triple):
-    print("APIVersion: ", triple.APIVersion)
-    print("predicate: ", triple.predicate)
-    print("subject: ", triple.subject)
-    print("object: ", object)
-    # 先串回原本處理websocket用的messagehandler
-    
-    # https://docs.pydantic.dev/1.10/usage/exporting_models/
-    print("ready for message handler:", triple.model_dump_json())
-    messageHandle(triple.model_dump_json())
-    return {"triple": "ok"}
 
 @app.post(
     path="/goal",
@@ -283,12 +270,46 @@ def run_subprocess():
     except Exception as e:
         result = f"無法讀取剪貼簿: {e}"
     
-        
+
+# TODO: 確認此端點存在的必要。若只是為了處理多執行緒，Chrome是不是可以不通過此端點
 @app.post(path="/excerpt",
         summary="新增摘錄",
-        description="新增剪貼簿中的摘錄",
-        response_model=dict)
-async def accept_excerpt(excerpt_data:excerpt_data):
+        description="接收摘錄視窗回傳的摘錄資訊，在知識庫中建立(摘錄)-[摘錄自]->(視窗)的關係",
+        response_model=dict,
+        responses={
+            200: {
+                "description": "順利儲存摘錄訊息",
+                "content": {
+                    "application/json": {
+                        "example": {
+                            "result": "儲存成功",
+                            "uuid": "c2086a17-451f-4d1e-8c1a-f61f43c2f715"
+                        }
+                    }
+                }
+            }
+        })
+async def accept_excerpt(excerpt_data: Annotated[
+        excerpt_data,
+        Body(
+            openapi_examples={
+                "瀏覽器回傳(包含網頁uuid)": {
+                    "summary": "從Extension回傳的摘錄資訊",
+                    "description": "範例描述",
+                    "value": {
+                        "window_title": "測試用視窗標題(網頁標題)",
+                        "text": "摘錄文字",
+                        "description": "使用者對此摘錄的說明",
+                        "app_path": "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+                        "app_name": "Google Chrome",
+                        "tag_string": "測試用tag, 測試用Tag, ",
+                        "from_uuid": "5027d813-0fe7-40e1-ad1a-e0a3ac4bdfb9",
+                        "url": "https://www.test.com"
+                    }
+                }
+            }
+        )
+    ]):
     """接收摘錄資料
     """
     # 若是由HTTP API呼叫出的摘錄，則將資料存入process_status，不作其他處理。
@@ -299,10 +320,10 @@ async def accept_excerpt(excerpt_data:excerpt_data):
     
     # 預設的快捷鍵呼叫
     else:
-        print(excerpt_data.dict())
-        result = (await call_api("/v1/knowledge_base/excerpt", "post", data=excerpt_data.dict()))["result"]
+        print_var(excerpt_data.dict())
+        result = (await call_api("/v1/knowledge_base/excerpt", "post", data=excerpt_data.dict(), debug_mode=True))
     # process_event.set()
-    return {"result": result}
+    return result
 
 @app.post(
     path="/gradio/",

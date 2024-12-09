@@ -16,11 +16,27 @@ class excerpt_data(BaseModel):
     app_path:str
     app_name:str
     tag_string:str=""
+    
+    model_config = {
+        "json_schema_extra":{
+            "examples": [
+                {
+                    "window_title": "testTitle",
+                    "text": "testText",
+                    "description": "testDescription",
+                    "app_path": "testAppPath",
+                    "app_name": "testAppName",
+                    "tag_string": "testTagString"
+                }
+            ]
+        },
+        "extra": "allow"
+    }
 
 def signal_handler(sig, frame):
     if excerpt_window_pid:
         print("關閉excerpt_window...")
-        excerpt_window_pid.terminate()  # 或者 proc.kill() 如果 terminate() 不足够
+        excerpt_window_pid.terminate()  # 或者 proc.kill() 如果 terminate()不夠
     sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)

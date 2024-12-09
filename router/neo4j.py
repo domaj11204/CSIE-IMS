@@ -1,5 +1,6 @@
 from pydantic import BaseModel
-from fastapi import APIRouter
+from fastapi import APIRouter, Body
+from typing import Annotated
 import aiohttp
 from modules.knowledge_base import source
 from modules.debug_utils import print_var
@@ -14,13 +15,29 @@ class neo4j_server_setting(BaseModel):
     user: str | None = None
     password: str | None = None
 
-class entity(BaseModel):
+class Entity(BaseModel):
     name: str
-    type: str
+    type: str|None = None
     uuid: str
-    description: str
-    relation: list=[]
+    description: str|None = None
+    relation: list = []
     data_hash: str | None = None
+    check_key: list | None = None
+    model_config={
+        "json_schema_extra": {
+            "example": {
+                "name": "test",
+                "url": "test_url",
+                "type": "測試用網頁",
+                "uuid": "959f0349-fd3c-480a-a29d-7fc9f06f1288",
+                "description": "test",
+                "founder": "預設"
+            }
+        },
+        # 加上extra能讓模型接受額外的參數，除了allow以外還有ignore, forbid 
+        # https://docs.pydantic.dev/latest/api/config/#pydantic.config.ConfigDict.extra
+        "extra": "allow"
+    }
 
 class relation_model(BaseModel):
     uuid1: str
@@ -36,7 +53,16 @@ neo4j_obj = neo4j_source()
 @router.get(path="/",
             summary="取得neo4j的狀態",
             response_description="neo4j最新的一筆資料\n\nstatus包含正常、未初始化及未知的知識庫資料庫",
-            response_model=dict)
+            response_model=dict,
+            responses={
+                200:{
+                    "description": "成功",
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "status": "正常",
+                                "last_node": "[<Record n=<Node element_id='4:516c4a38-5fd9-4e12-be22-93950217512e:24208' labels=frozenset({'測試用網頁'}) properties={'tabId': 2055685637, '建立時間': neo4j.time.DateTime(2024, 12, 3, 8, 10, 41, 920902700), 'founder': '預設', 'tabURL': 'https://blog.camel2243.com/posts/html-understand-why-sometimes-pressing-enter-will-automatically-submit-form-and-sometimes-not/', 'UUID': '7cf48ebd-9ee0-40d7-affe-ece8f29fc780', '描述': \"[html] 從 html spec 了解有時候按下 enter 會自動 submit form，有時卻不會？ | Camel 's blog\", '名稱': \"[html] 從 html spec 了解有時候按下 enter 會自動 submit form，有時卻不會？ | Camel 's blog\"}>>]"
+            }}}}})
 async def get_neo4j_status():
     global neo4j_obj
     if neo4j_obj == None:
@@ -47,25 +73,46 @@ async def get_neo4j_status():
 
 @router.post(path="/",
             summary="初始化neo4j",
-            description="根據config中的預設設定連線到neo4j",
+            description="根據config中的預設設定連線到neo4j，並取得最新的一筆資料",
             response_description="neo4j最新的一筆資料",
-            response_model=dict
-            )
+            response_model=dict,
+            responses={
+                200: {
+                    "description": "成功",
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "status": "正常",
+                                "last_node": "[<Record n=<Node element_id='4:516c4a38-5fd9-4e12-be22-93950217512e:24208' labels=frozenset({'測試用網頁'}) properties={'tabId': 2055685637, '建立時間': neo4j.time.DateTime(2024, 12, 3, 8, 10, 41, 920902700), 'founder': '預設', 'tabURL': 'https://blog.camel2243.com/posts/html-understand-why-sometimes-pressing-enter-will-automatically-submit-form-and-sometimes-not/', 'UUID': '7cf48ebd-9ee0-40d7-affe-ece8f29fc780', '描述': \"[html] 從 html spec 了解有時候按下 enter 會自動 submit form，有時卻不會？ | Camel 's blog\", '名稱': \"[html] 從 html spec 了解有時候按下 enter 會自動 submit form，有時卻不會？ | Camel 's blog\"}>>]"
+            }}}}})
 async def set_neo4j():
+    # TODO: 此API應該提供除了使用config的設定之外，還能使用post body提供參數進行設定
     global neo4j_obj
     neo4j_obj = neo4j_source()
-    return {"status": str(neo4j_obj.DB.get_latest_node(num_node=1))}
+    return {"last_node": str(neo4j_obj.DB.get_latest_node(num_node=1))}
 
 
 @router.get(path="/search",
             summary="搜尋",
             description="根據預設的搜尋欄位搜尋",
             response_description="搜尋結果",
-            response_model=dict)
-async def search(keyword:str, search_type:str="keyword", top_k:int=3, type_list:str=None):
+            response_model=dict,
+            responses={
+                200: {
+                    "description": "成功",
+                    "content": {
+                        "application/json": {
+                            "example": {
+                                "result": [
+                                    "8f53981f-666f-4560-b930-0f3692410f12"
+                                ]
+            }}}}})
+async def search(keyword:str, search_type:str="keyword", top_k:int=1, type_list:str=None):
     global neo4j_obj
     if neo4j_obj == None:
         return {"result": "未初始化"}
+    if type_list != None:
+        type_list = type_list.split(",| ")
     result = await neo4j_obj.search(keyword=keyword, search_type=search_type, top_k=top_k, type_list=type_list)
     return {"result": result}
 
@@ -131,11 +178,38 @@ async def get_latest_entity(top_k:int=1):
     response_description="新增entity結果，包含新增成功與新增失敗，若成功也會回傳uuid",
     response_model=dict
 )
-async def add_entity(entity:dict, check_key:list=[]):
+async def add_entity(entity:Annotated[
+    Entity,
+    Body(
+        openapi_examples={
+            "包含關係的網頁摘錄":{
+                "summary": "包含關係的網頁摘錄",
+                "description": "新增網頁摘錄到知識庫",
+                "value":{
+                    "name": "測試用名稱",
+                    "type": "測試用摘錄",
+                    "uuid": "c2086a17-451f-4d1e-8c1a-f61f43c2f715",
+                    "description": "測試用描述",
+                    "relation":[
+                        {
+                            "uuid1": "c2086a17-451f-4d1e-8c1a-f61f43c2f715",
+                            "uuid2": "9d509060-ab32-4a8f-8f0a-f8e21276eb1f",
+                            "relation": "摘錄自",
+                            "property": {
+                                "關係屬性": "測試屬性"
+                            }
+                        }
+                    ],
+                    "check_key": ["name", "uuid"]
+                }
+            }
+        }
+    )
+]):
     """新增知識實體到neo4j"""
     global neo4j_obj
     print("router.neo4j:post entity", entity)
-    result = await neo4j_obj.add_entity(entity, other_key=check_key)
+    result = await neo4j_obj.add_entity(entity.dict())
     return result
 
 @router.get(
@@ -194,9 +268,21 @@ async def get_uri_by_uuid(uuid:str):
 @router.post(
     path="/reference_string",
     summary="渲染出該chunk的引用訊息",
-    response_model=dict
+    response_model=dict,
+    responses={
+        200: {
+            "description": "成功",
+            "content": {
+                "application/json": {
+                    "example": {
+  "reference_string": "參考摘錄: <a href=\"https://navidre.medium.com/which-vector-database-should-i-use-a-comparison-cheatsheet-cb330e55fca\" target=\"_blank\">Which Vector Database Should I Use? A Comparison Cheatsheet | by Navid Rezaei | Medium</a>"
+}
+                }
+            }
+        }
+    }
 )
-async def reference_string(reference_data:dict):
+async def reference_string(reference_data:dict=Body(..., example={"parent_uuid":"8fa78383-0dab-4c56-9dc2-0c7a30a0d935"})):
     global neo4j_obj
     result = await neo4j_obj.reference_string(reference_data)
     return {"reference_string": result}

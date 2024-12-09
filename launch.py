@@ -1,4 +1,4 @@
-"""管理整個系統，管理快捷鍵、Thread、初始化及關閉。
+"""管理整個系統、快捷鍵、Thread的初始化及關閉。
 """
 import asyncio
 import time
@@ -12,6 +12,7 @@ from modules.windows import get_foreground_window_title
 from modules.debug_utils import print_func_name
 from modules.utils import call_api
 import subprocess
+import asyncio
 
 excerpt_pid = None
 uvicorn_pid = None
@@ -43,8 +44,6 @@ def signal_handler(signum, frame):
         exit()
     else:
         exit()
-
-import asyncio
 
 def sync_wrapper(async_func, *args, **kwargs):
     """用於將async function包裝成一般function"""
@@ -131,6 +130,16 @@ def test_hotkey():
     print(DB.records_to_df(records=record, key=None))
     # subprocess.run(["python", "./PyQt.py", "AA", string])
 
+def launch_neo4j():
+    import os
+    import subprocess
+
+    # Neo4j 安裝路徑
+    neo4j_path = "/path/to/neo4j/bin"
+
+    # 啟動資料庫
+    subprocess.run([f"{neo4j_path}/neo4j", "start"])
+    
 @print_func_name
 def excerpt_code():
     """專門用於程式碼匯出

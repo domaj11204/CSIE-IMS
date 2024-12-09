@@ -11,7 +11,6 @@ import sys
 import keyboard
 import time
 import threading
-from RNSApi import send_triple
 from modules.utils import get_server_url, call_api
 import requests
 # log文件設定

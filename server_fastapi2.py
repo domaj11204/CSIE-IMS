@@ -17,7 +17,6 @@ import time
 import threading
 import os
 import psutil
-from modules.MessageHandle import messageHandle, set_DB
 
 from modules.utils import read_config
 config = read_config()

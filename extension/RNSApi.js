@@ -1,5 +1,3 @@
-let APIVersion = "3.0"
-
 /**
  * 以類似RDF三元體的格式包裝成JSON傳到fastapi
  * @param {*} subject RDF三元體中的主詞
@@ -8,12 +6,10 @@ let APIVersion = "3.0"
  */
 function sendTriple(subject, predicate, object){
   let returnJson = {
-    "APIVersion":APIVersion, 
     "predicate":unknownTypeToString(predicate), 
     "subject":unknownTypeToString(subject),
     "object":unknownTypeToString(object)
   }
-  // 棄用websocket，全面改用http
   // TODO: 這個host應該要可以更改，因此可能需要設定頁面
   let url = ""
   if (predicate == "ExcerptFrom") url = "http://127.0.0.1:27711/v1/chrome/excerpt"
@@ -62,7 +58,6 @@ function unknownTypeToString(Data){
 }
 
 function callAPI(url, method, data=null, params=null){
-  // 取得serer URL
   // TODO: 改成可以讀設定
   let serverURL = "http://127.0.0.1:27711"
   if (url[0] != "/")  url = "/" + url

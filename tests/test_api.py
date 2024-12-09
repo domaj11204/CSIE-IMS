@@ -1,6 +1,7 @@
 """
 本檔案嘗試案例驅動開發(也許真的有這種東西，但現在先懶得查)
 自動測試所有API
+最後全部通過日期: 2024-11-25
 """
 import requests
 import asyncio
@@ -9,8 +10,21 @@ from modules.utils import call_api
 from modules.test_utils import remove_uuids, remove_host
 pytest_plugins = ('pytest_asyncio',)
 
+@pytest.fixture
+async def new_note():
+    result = await call_api("v1/obsidian/note", "post", data={
+        "title": "pytest用標題",
+        "tags": ["pytest測試用"],
+        "content": "pytest用內容",
+        "abstract": "pytest用摘要",
+        "description": "pytest用描述"
+    })
+    return result
+
 @pytest.mark.asyncio
 async def test_rag_api1():
+    """以obsidian為source的rag測試
+    """
     response = await call_api("v1/rag/query", "post", {"source_list":["obsidian"], "type_list": [], "query":"FastAPI使用哪個port?"})
     bot_message = (await call_api("v1/rag/reference_synthesis", "post", data=response))
     assert "27711" in response["answer_text"]
@@ -24,6 +38,8 @@ async def test_rag_api1():
     
 @pytest.mark.asyncio
 async def test_rag_api2():
+    """以neo4j為source的rag測試
+    """
     response = await call_api("v1/rag/query", "post", {"source_list":["neo4j"], "type_list": [], "query":"FastAPI使用哪個port?"})
     bot_message = (await call_api("v1/rag/reference_synthesis", "post", data=response))
     assert "27711" not in response["answer_text"]
@@ -35,6 +51,8 @@ async def test_rag_api2():
 
 @pytest.mark.asyncio
 async def test_rag_api3():
+    """
+    """
     response = await call_api("v1/rag/query", "post", {"source_list":["neo4j"], "type_list": [], "query":"RAG結合甚麼可以提升效果?"})
     reference_list = response["reference_list"]
     assert reference_list[0]["parent_source"] == "neo4j"
@@ -68,7 +86,7 @@ async def test_rag_api4():
     
 @pytest.mark.asyncio
 async def test_rag_rdf():
-    response = await call_api("v1/rag/query", "post", {"source_list":["rdf"], "type_list": [], "query":"血虛證類有哪些證型?"})
+    response = await call_api("v1/rag/query", "post", {"source_list":["rdf"], "type_list": [], "query":"血虛證類有哪些證型?", "top_k": 4})
     # 改成血虛類證型包含哪些證候?結果可能不同
     reference_list = response["reference_list"]
     answer_text = response["answer_text"]
@@ -451,7 +469,7 @@ async def test_keyword_search():
         "top_k": 3
     })
     excepted_result = {
-    "result": "查詢結果:\n<a href=\"http://10.147.19.205:27711/v1/knowledge_base/url/53fe1711-d044-45b3-9449-78e8ba4b2eaf\">每日筆記/2024-05-14.md</a>\n"
+    "result": "查詢結果:\n<a href=\"http://127.0.0.1:27711/v1/knowledge_base/url/53fe1711-d044-45b3-9449-78e8ba4b2eaf\" target=\"_blank\">每日筆記/2024-05-14.md</a>\n"
     }
     assert remove_host(response) == remove_host(excepted_result)
 
@@ -466,7 +484,7 @@ async def test_fuzzy_search():
         })
     # UWRatio的結果
     excepted_result = {
-    "result": "查詢結果:\n<a href=\"http://10.147.19.205:27711/v1/knowledge_base/url/53fe1711-d044-45b3-9449-78e8ba4b2eaf\" target=\"_blank\">每日筆記/2024-05-14.md</a>\n<a href=\"http://10.147.19.205:27711/v1/knowledge_base/url/dfc2e518-d292-4f4f-88fa-e3b52eaa9055\" target=\"_blank\">每日筆記/2023-08-14.md</a>\n<a href=\"http://10.147.19.205:27711/v1/knowledge_base/url/5d56e48d-97b6-46ca-994b-15aa9b6c7b54\" target=\"_blank\">每日筆記/2023-09-05.md</a>\n"
+    "result": "查詢結果:\n<a href=\"http://127.0.0.1:27711/v1/knowledge_base/url/53fe1711-d044-45b3-9449-78e8ba4b2eaf\" target=\"_blank\">每日筆記/2024-05-14.md</a>\n<a href=\"http://10.147.19.205:27711/v1/knowledge_base/url/dfc2e518-d292-4f4f-88fa-e3b52eaa9055\" target=\"_blank\">每日筆記/2023-08-14.md</a>\n<a href=\"http://10.147.19.205:27711/v1/knowledge_base/url/5d56e48d-97b6-46ca-994b-15aa9b6c7b54\" target=\"_blank\">每日筆記/2023-09-05.md</a>\n"
     }
     assert remove_host(response) == remove_host(excepted_result)
     

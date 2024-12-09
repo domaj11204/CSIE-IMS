@@ -175,6 +175,7 @@ class neo4jDB(object):
             UNWIND $tag_list AS tag
             MERGE (WebPage:`網頁`{ url:$url })
             MERGE (Tag:`標籤`{ name:tag })
+            ON CREATE SET Tag.`UUID`=randomUUID()
             MERGE (WebPage) - [:`有標籤`] -> (Tag)
         """
         try:
@@ -267,12 +268,13 @@ class neo4jDB(object):
             logging.error(f"{query} raised an error: \n{exception}")
             raise
 
-    def search(self,keyword:str="", field:str="名稱", label:str=None, returnProperties=["name"]):
+    def search(self, keyword:str="", field:str="名稱", label:str=None, returnProperties=["name"], top_k=10, type_list:list=["摘錄"]):
         """查詢節點，以list回傳
-
         Args:
             label (str): 標籤名(optional)
         """
+        if type_list is None: # 例外處理，但這樣寫有點醜，實際應該寫在通用性更好的地方
+            type_list = []
         # 這部分可以寫成，有需要的回傳屬性P都轉成n.P AS P，接在RETURN後面
         # 有需要的話再做
         query = ""
@@ -282,14 +284,20 @@ class neo4jDB(object):
             label = label.replace('`', '\'').replace(';', '_') # 防止注入
             print(f"label: {temp} -> {label}")
             query += f"""MATCH (n:`{label}`)"""
+        elif len(type_list) > 0: # 若有要求type_list，則使用Cypher的label來過濾
+            query += f"""MATCH (n:"""
+            for type in type_list:
+                query += f"""`{type}`|"""
+            query = query[:-1] + ") "
         else:
-            query += f"""MATCH (n)
-                    """
+            query += "MATCH (n) "
         if keyword != "":
             keyword = keyword.replace('`', '\'').replace(';', '_') # 防止注入
-            query += f"""WHERE n.`{field}` CONTAINS '{keyword}'"""
-
+            query += f""" WHERE n.`{field}` CONTAINS '{keyword}'"""
+    
         query += " RETURN n.UUID AS UUID, n.名稱 AS name"
+        query += f""" ORDER BY size(n.`{field}`) ASC """
+        query += f""" LIMIT {top_k}"""
         try:
             records, summary, keys= self.driver.execute_query(
                 query, 
@@ -634,12 +642,26 @@ class neo4j_source(source):
             return {"result":"uuid已存在", "uuid":entity["uuid"]}
         # TODO: data_hash未實作完成，先註解掉
         # FIXME: 在chrome新增網頁資訊時只會以名稱和描述檢查重複與否，不會判斷URL，但也不用判斷tabid，因此需要想辦法傳遞需要判斷的項目
-        check_dict = {"名稱":entity["name"], "type":entity["type"], "描述":entity["description"]}
+        if "check_key" in entity.keys() and entity["check_key"] is not None and len(entity["check_key"])>0: # 以check_key list說明檢查重複的條件
+            check_dict = {key:entity[key] for key in entity["check_key"]}
+            entity.pop("check_key")
+        else:
+            check_dict = {"名稱":entity["name"], "type":entity["type"], "描述":-["description"]}
         for key in other_key:
             check_dict[key] = entity[key]
         check_result, uuid = self.check_by_dict(check_dict)# , "data_hash":entity["data_hash"]}):
         if check_result:
             return {"result":"相同屬性已存在", "uuid":uuid}
+        # 處理tag_string
+        import re
+        if "tag_string" in entity:
+            tag_list = re.split(r"[, ]", entity["tag_string"])
+            entity.pop("tag_string")
+            for tag in tag_list:
+                tag_uuid = self.add_entity({"name":tag, "type":"標籤"})
+                entity["relation"].append({"uuid1":entity["uuid"], "uuid2":tag_uuid, "relation":"有標籤"})
+
+
         # 先把type和relation拿出來
         label = entity.pop("type")
         relation = entity.pop("relation", None)
@@ -676,7 +698,9 @@ class neo4j_source(source):
         cypher = f"{cypher_match} {cypher_where} RETURN n.UUID"
         result = self.DB.cypher_to_df(cypher, kwargs)
         print_var(result)
-        return list(result["n\.UUID"])
+        if len(result)>0: return list(result["n\.UUID"])
+        else: return []
+        
     
     async def delete_node(self, uuid:str):
         """刪除節點
@@ -735,11 +759,10 @@ class neo4j_source(source):
         return list(result["n\.name"])
     
     async def keyword_search(self, keywords, top_k=3, type_list=[], **kwargs):
-        print_var(keywords)
-        result = self.DB.search(keyword=keywords)
-        print(result)
-        print_var(result)
+        """關鍵字搜尋，"""
+        result = self.DB.search(keyword=keywords, top_k=top_k, type_list=type_list, **kwargs)
         return result
+    # TODO: neo4j未覆寫模糊搜尋
     
 async def test():
     from modules.utils import call_api

@@ -6,21 +6,7 @@ import asyncio
 from aiohttp import web
 APIVersion = 2.1
 DB:neo4jDB = None
-
-def set_DB(db):
-    """用於將DB資料傳到MessageHandle.py
-
-    Args:
-        db (neo4j.GraphDatabase): DB
-    """
     
-    global DB
-    print("set_DB1:", DB, db)
-    DB = db
-    
-    print("set_DB2:", DB, db)
-    
-
 def messageHandle(message, DB=DB):
     """用於處理websocket收到的訊息
 

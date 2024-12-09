@@ -145,10 +145,10 @@ class source(object):
         
     async def search(self, keyword:str, search_type:str, top_k:int, **kwargs)->list:
         """搜尋，根據不同搜尋方式呼叫不同函數
+        這是所有source預設的搜尋函數
         可能回傳UUID、簡單dict等
         **kwargs: 用於傳遞其他搜尋參數，例如欄位filter
         """
-        from colorama import Fore
         if search_type == "keyword": return (await self.keyword_search(keyword, top_k=top_k, **kwargs))
         elif search_type == "fuzzy": return (await self.fuzzy_search(keyword, top_k=top_k, **kwargs))
         else:
@@ -163,7 +163,9 @@ class source(object):
     
     async def keyword_search(self, keyword:str, top_k:int=3, type_list:list=[])->list:
         """預設的關鍵字搜尋函數，
-        以知識庫中的名稱做搜尋，回傳uuids。"""
+        以知識庫中的名稱做搜尋，回傳uuids。
+        TODO: 和模糊搜尋合併
+        """
         from colorama import Fore
         print(Fore.GREEN+"使用預設關鍵字搜尋"+Fore.RESET)
         result_uuids = []
@@ -334,6 +336,7 @@ class knowledge_base(object):
         print_var(source_list)
         uuids = []
         result_str = "查詢結果:\n"
+        # TODO: 目前是將type轉source，應該有更乾脆的做法
         for type in type_list:
             if len(type) > 0:
                 source_list.extend(self.get_source_by_type(type))
@@ -345,7 +348,8 @@ class knowledge_base(object):
                                                params={"keyword":keyword, 
                                                        "search_type": search_type, 
                                                        "top_k":top_k, 
-                                                       "type_list":",".join(type_list)})
+                                                       "type_list":",".join(type_list)},
+                                               debug_mode=True)
             if "uuids" in source_search_result.keys():
                 uuids.extend(source_search_result["uuids"])
             else:
@@ -429,28 +433,43 @@ class knowledge_base(object):
             return False
         
     async def add_excerpt(self, excerpt_data:dict):
-        """新增摘錄到知識庫"""
+        """新增摘錄到知識庫
+        return (dict): 儲存的結果，若成功則包含uuid
+        """
         # 先直接存成實體
         try:
             entity = excerpt_data.copy()
             entity["type"] = "摘錄"
-            entity["name"] = "摘錄自" + entity["window_title"]
-            entity["description"] = entity["text"]
-            entity.pop("window_title")
-            entity.pop("text")
-            result = await self.add_entity(entity)
+            entity["name"] = "摘錄自" + entity.pop("window_title")
+            if "text" in entity.keys(): # 如果有text代表是有內容的摘錄，而不是純粹的網頁摘錄
+                entity["摘錄"] = entity.pop("text")
+            result = await self.add_entity(entity) # 新增到實體
             if result["result"] == "新增失敗":
                 return "失敗"
-            if entity["app_name"] == "zotero.exe":
-                # 論文摘錄
-                paper_name = entity["name"].replace("摘錄自", "")
-                paper_uuid = (await call_api(f"v1/{self.db}/search", "get", params={"keyword":entity["paper_name"], "search_type":"keyword"}))["result"][0]
-                relation_result = await call_api(f"v1/{self.db}/relation", "post", {"uuid1":result["uuid"], "uuid2":paper_uuid, "relation":"摘錄自"})
-            # TODO: 將其他視窗訊息也加進來
-                return self.get_info(result["uuid"])
-            
+            if "tag_string" in entity.keys():
+                import re
+                tag_list = re.split(r"[, ]",entity.pop("tag_string"))
+                for tag in tag_list:
+                    if len(tag) == 0: continue
+                    tag_uuid = await(self.add_tag(tag))
+                    await call_api(f"v1/{self.db}/relation", "post", {"uuid1":result["uuid"], "uuid2":tag_uuid, "relation":"有標籤"})
                 
-        except:
+            if "from_uuid" in excerpt_data.keys():
+                # 已經有摘錄來源的uuid，包含視窗、論文、網頁等
+                parent_uuid = excerpt_data["from_uuid"]
+            else: # 沒有附摘錄來源的uuid，以視窗標題為關鍵字搜尋
+                # TODO: 但這樣做會搜尋到自己，必須想辦法避免
+                # 也許可以直接新增一個視窗資訊?
+                parent_name = entity["name"].replace("摘錄自", "") # 取得原始視窗標題
+                # 根據視窗標題找到該uuid
+                parent_uuid = (await call_api(f"v1/{self.db}/search", "get", params={"keyword":parent_name, "search_type":"keyword"}))["result"][0]
+            # 儲存摘錄關係
+            relation_result = await call_api(f"v1/{self.db}/relation", "post", {"uuid1":result["uuid"], "uuid2":parent_uuid, "relation":"摘錄自"})
+            return {"result": "儲存成功",
+                    "uuid": result["uuid"]}
+            
+        except Exception as e:
+            print("knowledgebase新增摘錄失敗:", e)
             return "失敗"
     async def load_data(self, source:str, type_str:str):
         # FIXME: 需要調整type
@@ -488,7 +507,9 @@ class knowledge_base(object):
     
     async def add_entity(self, entity:dict):
         """新增實體到知識庫
+        包含摘錄等實體
         注意: entity中不能使用data作為key
+        return: 新增結果，包含結果說明"result"及新增的"uuid"
         """
         print("收到的entity:", entity)
         # FIXME: 怪問題，暫時先這樣解決
@@ -528,19 +549,23 @@ class knowledge_base(object):
         # 檢查資料庫狀態
         result = await call_api(f"/v1/{self.db}", "get")
         if "status" not in result or result["status"] != "正常":
-            # 若資料庫未開啟則開啟
+            # 若資料庫狀態錯誤則嘗試開啟
+            print("嘗試開啟資料庫...")
             # TODO: 若網路不穩可能會斷線，要想辦法處理
             await call_api(f"/v1/{self.db}", "post")
         
         # 新增實體
         result = await call_api(f"v1/{self.db}/entity", "post", entity)
+        print(result)
         # 嵌入實體
         # TODO: 若uuid未嵌入則需要嵌入? 但切割後parent也不再嵌入資料庫中
         return {"result": result["result"],
                 "uuid": result["uuid"]}
     
     async def add_relation(self, uuid1:str, uuid2:str, relation:str, property:dict={}):
-        """新增關係到知識庫"""
+        """新增關係到知識庫
+        TODO: 如何檢查、處理已存在的relation
+        """
         result = (await call_api(f"v1/{self.db}/relation", "post", {
             "uuid1":uuid1, 
             "uuid2":uuid2, 
@@ -603,12 +628,16 @@ class knowledge_base(object):
                         search_type:str=None, 
                         source_list:list=None, 
                         type_list:list=None, 
-                        top_k:int=None)->dict:
-        """根據來源取得所有UUID"""
-        for item in locals().items():
-            print(item)
+                        top_k:int=None)->list:
+        """根據來源取得所有UUID
+        TODO: 應該讓來源、類型、關鍵字能同時作用
+        TODO: 不存在的來源或類型可以有額外的結果訊息
+        FIXME: 型態可以精簡，在某些情況下應該可以直接用source_list來取代source
+        """
+        # 有關鍵字就呼叫搜尋函數
         if keyword is not None:
             uuids = (await self.search(keyword=keyword, search_type=search_type, source_list=source_list, type_list=type_list, top_k=top_k))["uuids"]
+        # 否則用來源或類型過濾
         if source is not None:
             uuids = (await call_api(f"/v1/{self.db}/uuids", "get", params={"source": source}))["uuids"]
         else:
@@ -639,6 +668,20 @@ class knowledge_base(object):
         """從知識庫取得所有tag"""
         tags = (await call_api(f"/v1/{self.db}/tag", "get"))["tags"]
         return tags
+    
+    async def add_tag(self, tag:str)->str:
+        """新增tag到知識庫並回傳該UUID，若已存在則僅回傳UUID
+        return (str): tag的UUID
+        """
+        tag_entity = {
+            "name": tag,
+            "type": "標籤",
+            "uuid": str(uuid4())
+        }
+        uuid = (await call_api(f"/v1/{self.db}/entity", "post", tag_entity, debug_mode=True))["uuid"]
+        return uuid
+        
+        
                                    
 if __name__ == "__main__":
     import asyncio

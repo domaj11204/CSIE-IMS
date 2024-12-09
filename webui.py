@@ -71,7 +71,9 @@ generator_eval = data_generator(df_llm_test)
 # df_eval = pd.read_excel("./data/llm_eval.xlsx", index_col=0)
 # df_eval.fillna("", inplace=True)
 
-with gr.Blocks(theme=gr.themes.Soft(), js=js) as demo:
+with gr.Blocks(theme=gr.themes.Soft(
+        font=gr.themes.GoogleFont("Roboto") # 更新到5版時發現預設字型變了，很醜，因此手動改成這個
+    ), js=js) as demo:
     with gr.Tab(label="實驗"):
         cypher = gr.Textbox("Cypher")
         gr_df = gr.Dataframe()
